@@ -2,7 +2,8 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Theater Workshops</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theater Workshops - Über mich</title>
     <style>
         :root {
             --color-bg:        #0f0f1a;
@@ -22,39 +23,45 @@
             color: var(--color-text);
             min-height: 100vh;
             padding: 4rem 1rem 5rem;
-            text-align: center;
         }
         header {
             margin-bottom: 4rem;
+            text-align: center;
         }
-        h1{
+        h1 {
             font-size: clamp(2.5rem, 4vw + 1rem, 7rem);
             line-height: 1.2;
             font-weight: 600;
             color: var(--color-accent);
             margin-bottom: 0.8rem;
             text-shadow: 0 4px 15px rgba(233,69,96,0.3);
-            }
-
+        }
+        h2 {
+            color: var(--color-accent);
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
         .main-content-box {
-            font-size: 1.6rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
             background: var(--color-card);
             border-radius: var(--radius);
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            min-height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
+            max-width: 800px;
+            margin: 0 auto 15px;
+            padding: 2.5rem;
             text-align: left;
-            padding: 20px
-            }
+        }
+        p {
+            margin-bottom: 1rem;
+        }
         ul {
-            text-align: left;
-            list-style-position: inside;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
@@ -62,49 +69,64 @@
     <header>
         <h1>Über mich</h1>
     </header>
-    <div class="main-content-box">
-        <a>Ich bin Sabine Eberling – Therapeutin, Theaterpädagogin und leidenschaftliche Improvisationskünstlerin.
-            Ausbildung & künstlerischer Weg
-            Mein Fundament ist eine fundierte therapeutische und pädagogische Ausbildung:
-            Sport- und Gymnastiklehrerin sowie Physiotherapeutin
-            Studium: B.A. Management sozialer Innovationen
-            Ausbildung zur Theaterpädagogin
-            Clownsausbildung an der Antiheldenakademie, Augsburg (2021–2022)
-            Dazu kommt eine kontinuierliche künstlerische Weiterentwicklung durch zahlreiche Theater- und Improvisationsworkshops – unter anderem bei den Heidelberger Theatertagen sowie bei erfahrenen Dozenten wie Wolfgang Mettenberger, Christian Verhoeven und Susi Wimmer.
-            Bühne, Clown & lebendige Begegnung
-            Meine Reise begann früh – mit ersten Clownerfahrungen im Jugendzirkus. Seitdem hat mich diese Ausdrucksform nicht mehr losgelassen.
-            Heute stehe ich regelmäßig auf der Bühne und bringe meine Arbeit dorthin, wo Menschen zusammenkommen:
-            Auftritte bei Festen, Veranstaltungen und im sozialen Bereich
-            Clownperformances bei Kinder- und Kulturprojekten
-            Künstlerische Projekte wie „Zirkus aus dem Koffer“
-            Ich bin Mitglied bei Clowns ohne Grenzen – Auslandseinsätze sind geplant, um Menschen auch über kulturelle Grenzen hinweg mit Humor und Menschlichkeit zu erreichen.
-            Theaterarbeit & Projekte
-            Theater ist für mich ein Raum für echte Begegnung. Ein Raum, in dem Unterschiedlichkeit sichtbar und wertvoll wird.
-            1999: Gründung der Theatergruppe „Litfasssäule“
-            2002: Mitgründung des inklusiven „Augenblicktheaters“ in Mannheim – ein Herzensprojekt mit Jugendlichen mit und ohne Behinderung
-            2013: Gründung der Improgruppe „Die heißen Apfeltaschen“
-            2025: Gründung der Improgruppe „ImproGetöse“
-            Über viele Jahre habe ich Improvisationstheater-Kurse geleitet – unter anderem beim Studentenwerk München sowie in kulturellen und sozialen Einrichtungen. Dazu kommen zahlreiche Projekte, Workshops und selbst organisierte Theaterabende.
-            Meine Arbeit heute
-            In meiner Arbeit verbinde ich therapeutische Erfahrung mit kreativen Methoden. Ich begleite Menschen dabei, sich selbst neu zu erleben – über Bewegung, Spiel und Ausdruck.
-            Was dabei entsteht, ist oft mehr als ein Kurs oder eine Therapieeinheit:
-            Es sind Momente von Lebendigkeit, Mut und echtem Kontakt.
-            Was mir wichtig ist
-            Ich glaube an die Kraft von Humor.
-            An die Wirkung von Präsenz.
-            Und daran, dass jeder Mensch Ausdruck und Resonanz verdient.
-            Theatergethöse steht für ein vielseitiges Programm voller Energie und Ideenreichtum. Ob besondere Shows oder kreative Stunden - hier wird Spontanität zum Erlerbnis
-            Perfekt geignet für:
-            <ul>
-                <li>Feste und Feiern</li>
-                <li>Geburtstage</li>
-                <li>Sommerfeste</li>
-                <li>Bunte Abende</li>
-                <li>Firmenshows</li>
-                <li>Auflockerung in kulturpolitischen Veranstaltungen</li>
-            </ul>
-        </a>
-    </div>
+    
+    <main class="main-content-box">
+        <p>Ich bin Sabine Eberling – Therapeutin, Theaterpädagogin und leidenschaftliche Improvisationskünstlerin.</p>
+        
+        <h2>Ausbildung &amp; künstlerischer Weg</h2>
+        <p>Mein Fundament ist eine fundierte therapeutische und pädagogische Ausbildung:</p>
+        <ul>
+            <li>Sport- und Gymnastiklehrerin sowie Physiotherapeutin</li>
+            <li>Studium: B.A. Management sozialer Innovationen</li>
+            <li>Ausbildung zur Theaterpädagogin</li>
+            <li>Clownsausbildung an der Antiheldenakademie, Augsburg (2021–2022)</li>
+        </ul>
+        <p>Dazu kommt eine kontinuierliche künstlerische Weiterentwicklung durch zahlreiche Theater- und Improvisationsworkshops – unter anderem bei den Heidelberger Theatertagen sowie bei erfahrenen Dozenten wie Wolfgang Mettenberger, Christian Verhoeven und Susi Wimmer.</p>
+        
+        <h2>Bühne, Clown &amp; lebendige Begegnung</h2>
+        <p>Meine Reise begann früh – mit ersten Clownerfahrungen im Jugendzirkus. Seitdem hat mich diese Ausdrucksform nicht mehr losgelassen.</p>
+        <p>Heute stehe ich regelmäßig auf der Bühne und bringe meine Arbeit dorthin, wo Menschen zusammenkommen:</p>
+        <ul>
+            <li>Auftritte bei Festen, Veranstaltungen und im sozialen Bereich</li>
+            <li>Clownperformances bei Kinder- und Kulturprojekten</li>
+            <li>Künstlerische Projekte wie „Zirkus aus dem Koffer“</li>
+        </ul>
+        <p>Ich bin Mitglied bei Clowns ohne Grenzen – Auslandseinsätze sind geplant, um Menschen auch über kulturelle Grenzen hinweg mit Humor und Menschlichkeit zu erreichen.</p>
+        
+        <h2>Theaterarbeit &amp; Projekte</h2>
+        <p>Theater ist für mich ein Raum für echte Begegnung. Ein Raum, in dem Unterschiedlichkeit sichtbar und wertvoll wird.</p>
+        <ul>
+            <li>1999: Gründung der Theatergruppe „Litfasssäule“</li>
+            <li>2002: Mitgründung des inklusiven „Augenblicktheaters“ in Mannheim – ein Herzensprojekt mit Jugendlichen mit und ohne Behinderung</li>
+            <li>2013: Gründung der Improgruppe „Die heißen Apfeltaschen“</li>
+            <li>2025: Gründung der Improgruppe „ImproGetöse“</li>
+        </ul>
+        <p>Über viele Jahre habe ich Improvisationstheater-Kurse geleitet – unter anderem beim Studentenwerk München sowie in kulturellen und sozialen Einrichtungen. Dazu kommen zahlreiche Projekte, Workshops und selbst organisierte Theaterabende.</p>
+        
+        <h2>Meine Arbeit heute</h2>
+        <p>In meiner Arbeit verbinde ich therapeutische Erfahrung mit kreativen Methoden. Ich begleite Menschen dabei, sich selbst neu zu erleben – über Bewegung, Spiel und Ausdruck.</p>
+        <p>Was dabei entsteht, ist oft mehr als ein Kurs oder eine Therapieeinheit: Es sind Momente von Lebendigkeit, Mut und echtem Kontakt.</p>
+        
+        <h2>Was mir wichtig ist</h2>
+        <ul>
+            <li>Ich glaube an die Kraft von Humor.</li>
+            <li>An die Wirkung von Präsenz.</li>
+            <li>Und daran, dass jeder Mensch Ausdruck und Resonanz verdient.</li>
+        </ul>
+        
+        <p>Theatergetöse steht für ein vielseitiges Programm voller Energie und Ideenreichtum. Ob besondere Shows oder kreative Stunden - hier wird Spontanität zum Erlebnis.</p>
+        
+        <p><strong>Perfekt geeignet für:</strong></p>
+        <ul>
+            <li>Feste und Feiern</li>
+            <li>Geburtstage</li>
+            <li>Sommerfeste</li>
+            <li>Bunte Abende</li>
+            <li>Firmenshows</li>
+            <li>Auflockerung in kulturpolitischen Veranstaltungen</li>
+        </ul>
+    </main>
 </body>
 </html>
+
 
