@@ -1,44 +1,184 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Theater Workshops</title>
-    <style>
-                        :root {
-            --color-bg:        #0f0f1a;
-            --color-text:      #f0f0ff;
-            --color-accent:    #e94560;
-            --color-card:      #1a1a2e;
-            --radius:          16px;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background: var(--color-bg);
-            color: var(--color-text);
-            min-height: 100vh;
-            padding: 4rem 1rem 5rem;
-            text-align: center;
-        }
-          header {
-            margin-bottom: 6rem;
-        }
-        h1{
-            font-size: clamp(3.2rem, 11vw, 7rem);
-            color: var(--color-accent);
-            margin-bottom: 0.8rem;
-            text-shadow: 0 4px 15px rgba(233,69,96,0.3);
-          
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ClownsGedönse – Wo das Lachen zuhause ist!</title>
+  
+  <meta name="description" content="ClownsGedönse: Mit Herz, Humor und einer Prise Quatsch für Kindergeburtstage, Sommerfeste und Schulen.">
+  
+  <style>
+    :root {
+      --color-bg:        #0f0f1a;
+      --color-text:      #f0f0ff;
+      --color-accent:    #e94560;
+      --color-card:      #1a1a2e;
+      --radius:          16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      min-height: 100vh;
+      padding: 4rem 1rem 5rem;
+      text-align: center;
+    }
+
+    header {
+      margin-bottom: 5rem;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 9vw, 5.5rem);
+      color: var(--color-accent);
+      margin-bottom: 0.8rem;
+      text-shadow: 0 4px 15px rgba(233,69,96,0.3);
+      line-height: 1.2;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      opacity: 0.85;
+      max-width: 800px;
+      margin: 0 auto 1.5rem;
+      font-weight: 500;
+    }
+
+    .intro-text {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 4rem;
+      line-height: 1.6;
+      opacity: 0.75;
+    }
+
+    .target-groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.2rem;
+      max-width: 1400px;
+      margin: 0 auto 5rem;
+      padding: 0 1rem;
+    }
+
+    .group-tile {
+      background: var(--color-card);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      transition: all 0.3s ease;
+      padding: 3rem 2rem;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .group-tile:hover {
+      transform: translateY(-10px) scale(1.01);
+      box-shadow: 0 24px 48px rgba(233,69,96,0.25);
+    }
+
+    .group-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ffebee;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--color-accent);
+      padding-bottom: 0.5rem;
+    }
+
+    .group-desc {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      opacity: 0.85;
+    }
+
+    .philosophy-section {
+      max-width: 800px;
+      margin: 0 auto 4rem;
+      padding: 3rem 2rem;
+      background: linear-gradient(145deg, #1a1a2e, #111125);
+      border-radius: var(--radius);
+      border: 1px solid rgba(233, 69, 96, 0.2);
+    }
+
+    .philosophy-section h2 {
+      color: var(--color-accent);
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .philosophy-section p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .cta-box {
+      margin-top: 4rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #ffebee;
+    }
+
+    footer {
+      margin-top: 6rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Clownsgedönse</h1>
-    </header>
-    
+
+  <header>
+    <h1>ClownsGedönse</h1>
+    <p class="tagline">Wo das Lachen zuhause ist! – Mit Herz, Humor und einer Prise Quatsch!</p>
+  </header>
+
+  <main>
+    <p class="intro-text">
+      Hereinspaziert, hereinspaziert! Bei ClownsGedönse wird gestaunt, gelacht, gespielt und manchmal sogar ein bisschen herumgealbert. Mit roten Nasen, lustigen Ideen und jeder Menge guter Laune bringe ich Kinderaugen zum Strahlen und Herzen zum Hüpfen.
+    </p>
+
+    <section class="target-groups">
+      <div class="group-tile">
+        <h2 class="group-title">Feste & Feiern</h2>
+        <p class="group-desc">Ob beim Kindergeburtstag, Sommerfest oder Familienfest – überall dort, wo Kinder sind, darf gelacht werden! Gemeinsam erleben wir kleine und große Abenteuer.</p>
+      </div>
+
+      <div class="group-tile">
+        <h2 class="group-title">Schulen & Kitas</h2>
+        <p class="group-desc">Bunte Clownshows und verrückte Überraschungen direkt in der Schule oder im Kindergarten. Wir entdecken spielerisch die Fantasie und sammeln fröhliche Momente.</p>
+      </div>
+
+      <div class="group-tile">
+        <h2 class="group-title">Clowns ohne Grenzen</h2>
+        <p class="group-desc">Aus tiefer Überzeugung engagierte Herzensarbeit. Weil ein fröhliches Lachen unbezahlbar wertvoll ist und die Welt für einen Augenblick etwas leichter macht.</p>
+      </div>
+    </section>
+      
+    <section class="philosophy-section">
+      <h2>Ein Hoch auf den Humor!</h2>
+      <p>
+        Clownsein bedeutet für mich: Menschen ein Lächeln schenken, Freude teilen und die Welt bunter machen. Auf kichernde Kinder, fröhliche Familien und all die kleinen Augenblicke, die das Leben bereichern.
+      </p>
+    </section>
+
+    <p class="cta-box">
+      Ich freue mich darauf, euch kennenzulernen und gemeinsam jede Menge clowneskes Gedönse zu erleben!
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ClownsGedönse. Alle Rechte vorbehalten.</p>
+  </footer>
+
 </body>
 </html>
