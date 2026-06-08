@@ -59,6 +59,7 @@
       opacity: 0.75;
     }
 
+    /* Grid für Zielgruppen */
     .target-groups {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -75,9 +76,6 @@
       transition: all 0.3s ease;
       padding: 3rem 2rem;
       text-align: left;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
 
     .group-tile:hover {
@@ -100,9 +98,43 @@
       opacity: 0.85;
     }
 
+    /* NEU: Flexibilitäts-Sektion (Zwei Spalten für Solo vs Gruppe) */
+    .flexibility-section {
+      max-width: 1100px;
+      margin: 0 auto 5rem;
+      padding: 0 1rem;
+    }
+
+    .flexibility-section h2 {
+      font-size: 2.2rem;
+      color: #ffebee;
+      margin-bottom: 2.5rem;
+    }
+
+    .flex-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .flex-card {
+      background: rgba(26, 26, 46, 0.5);
+      border: 1px solid rgba(233, 69, 96, 0.2);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      text-align: left;
+    }
+
+    .flex-card h3 {
+      color: var(--color-accent);
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    /* Philosophie-Box */
     .philosophy-section {
       max-width: 800px;
-      margin: 0 auto 4rem;
+      margin: 0 auto 5rem;
       padding: 3rem 2rem;
       background: linear-gradient(145deg, #1a1a2e, #111125);
       border-radius: var(--radius);
@@ -121,11 +153,54 @@
       opacity: 0.9;
     }
 
-    .cta-box {
-      margin-top: 4rem;
-      font-size: 1.4rem;
-      font-weight: bold;
+    /* NEU: Kontakt-Aufruf & Formate */
+    .contact-section {
+      max-width: 800px;
+      margin: 0 auto 4rem;
+      padding: 0 1rem;
+    }
+
+    .formats-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .format-tag {
+      background: var(--color-card);
+      border: 1px solid var(--color-accent);
       color: #ffebee;
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .cta-box {
+      font-size: 1.3rem;
+      line-height: 1.6;
+      color: #ffebee;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .cta-highlight {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: var(--color-bg);
+      background: var(--color-accent);
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(233,69,96,0.4);
+      transition: transform 0.2s ease;
+    }
+
+    .cta-highlight:hover {
+      transform: scale(1.05);
     }
 
     footer {
@@ -147,6 +222,7 @@
       Hereinspaziert, hereinspaziert! Bei ClownsGedönse wird gestaunt, gelacht, gespielt und manchmal sogar ein bisschen herumgealbert. Mit roten Nasen, lustigen Ideen und jeder Menge guter Laune bringe ich Kinderaugen zum Strahlen und Herzen zum Hüpfen.
     </p>
 
+    <!-- Zielgruppen-Kacheln -->
     <section class="target-groups">
       <div class="group-tile">
         <h2 class="group-title">Feste & Feiern</h2>
@@ -163,7 +239,23 @@
         <p class="group-desc">Aus tiefer Überzeugung engagierte Herzensarbeit. Weil ein fröhliches Lachen unbezahlbar wertvoll ist und die Welt für einen Augenblick etwas leichter macht.</p>
       </div>
     </section>
-      
+
+    <!-- NEUE SEKTION: Flexibel, vielseitig und mit viel Herz -->
+    <section class="flexibility-section">
+      <h2>Flexibel, vielseitig und mit viel Herz</h2>
+      <div class="flex-grid">
+        <div class="flex-card">
+          <h3>Solo oder als Gruppe</h3>
+          <p>ClownsGedönse ist sowohl als Soloprogramm als auch mit einer Clownsgruppe von bis zu sechs Clowns buchbar. Je nach Anlass und Veranstaltungsgröße gestalten wir individuelle Formate.</p>
+        </div>
+        <div class="flex-card">
+          <h3>Gemeinsam für die gute Sache</h3>
+          <p>Neben unseren Auftritten engagieren wir uns gelegentlich auch in gemeinnützigen Projekten. Denn wir sind überzeugt: Lachen ist ein Geschenk, das Menschen verbindet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophie-Box -->
     <section class="philosophy-section">
       <h2>Ein Hoch auf den Humor!</h2>
       <p>
@@ -171,9 +263,21 @@
       </p>
     </section>
 
-    <p class="cta-box">
-      Ich freue mich darauf, euch kennenzulernen und gemeinsam jede Menge clowneskes Gedönse zu erleben!
-    </p>
+    <!-- NEUE SEKTION: Formate & Kontakt -->
+    <section class="contact-section">
+      <div class="formats-list">
+        <span class="format-tag">✨ Kleine Überraschung</span>
+        <span class="format-tag">🎭 Walk Act</span>
+        <span class="format-tag">🤝 Interaktive Begegnungen</span>
+        <span class="format-tag">🎪 Großes Bühnenprogramm</span>
+      </div>
+
+      <div class="cta-box">
+        <p>Sprechen Sie uns gerne an. Gemeinsam finden wir das passende Konzept für Ihre Veranstaltung – kreativ, unkompliziert und exakt auf Ihre Wünsche abgestimmt.</p>
+        <!-- Platzhalter für einen Link zu deinem Kontaktformular oder E-Mail -->
+        <a href="#kontakt" class="cta-highlight">Jetzt unverbindlich anfragen</a>
+      </div>
+    </section>
   </main>
 
   <footer>
