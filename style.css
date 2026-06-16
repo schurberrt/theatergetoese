@@ -275,3 +275,79 @@ footer a:hover {
 .cta-highlight:hover {
   transform: scale(1.05);
 }
+/* --- EXTRA DESIGN FÜR DIE ÜBER-MICH-TIMELINE & OPTIK --- */
+
+.timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 2rem auto 4rem;
+  padding-left: 2rem;
+  border-left: 3px solid var(--color-card-hover);
+  text-align: left;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.4rem;
+  top: 0.2rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 3px var(--color-card-hover);
+}
+
+.timeline-date {
+  font-weight: 800;
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.3rem;
+  color: #0d47a1;
+  margin-bottom: 0.5rem;
+}
+
+/* Stilvolle Checklisten */
+.check-list {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.8rem !important;
+}
+
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+/* Großer Zitat-Kasten (Quote) */
+.quote-box {
+  background: #f0f7ff;
+  border-left: 5px solid #1976d2;
+  padding: 1.5rem 2rem;
+  margin: 3rem auto;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-style: italic;
+  font-size: 1.2rem;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(25, 118, 210, 0.05);
+}
