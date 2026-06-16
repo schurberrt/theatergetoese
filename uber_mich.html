@@ -4,70 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Theater Workshops - Über mich</title>
-    <style>
-        :root {
-            --color-bg:        #0f0f1a;
-            --color-text:      #f0f0ff;
-            --color-accent:    #e94560;
-            --color-card:      #1a1a2e;
-            --radius:          16px;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background: var(--color-bg);
-            color: var(--color-text);
-            min-height: 100vh;
-            padding: 4rem 1rem 5rem;
-        }
-        header {
-            margin-bottom: 4rem;
-            text-align: center;
-        }
-        h1 {
-            font-size: clamp(2.5rem, 4vw + 1rem, 7rem);
-            line-height: 1.2;
-            font-weight: 600;
-            color: var(--color-accent);
-            margin-bottom: 0.8rem;
-            text-shadow: 0 4px 15px rgba(233,69,96,0.3);
-        }
-        h2 {
-            color: var(--color-accent);
-            font-size: 1.8rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        .main-content-box {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            background: var(--color-card);
-            border-radius: var(--radius);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            max-width: 800px;
-            margin: 0 auto 15px;
-            padding: 2.5rem;
-            text-align: left;
-        }
-        p {
-            margin-bottom: 1rem;
-        }
-        ul {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-        }
-        li {
-            margin-bottom: 0.5rem;
-        }
-    </style>
+    <!-- Holt sich das einheitliche Vorhang-Design -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Der Wrapper sorgt für den weißen Hintergrund vor dem Vorhang -->
+  <div class="page-wrapper">
+
     <header>
-        <h1>Über mich</h1>
+      <div class="logo-container">
+        <img src="Logo 20kb.png" alt="TheaterGetöse Logo">
+      </div>
+      <h1>Über mich</h1>
+      <p class="tagline">Therapeutin, Theaterpädagogin & Improvisationskünstlerin</p>
     </header>
     
     <main class="main-content-box">
@@ -126,6 +76,19 @@
             <li>Auflockerung in kulturpolitischen Veranstaltungen</li>
         </ul>
     </main>
+
+    <!-- Eleganter Zurück-Button am Ende der Seite -->
+    <div style="text-align: center; margin: 3rem 0 1rem;">
+      <a href="index.html" class="cta-highlight">Zurück zur Startseite</a>
+    </div>
+
+    <footer>
+      <p>© 2026 – TheaterGetöse<br>
+         <a href="impressum.html">Impressum</a>  •   <a href="datenschutz.html">Datenschutz</a></p>
+    </footer>
+
+  </div>
+
 </body>
 </html>
 
