@@ -139,3 +139,139 @@ footer a:hover {
   h1 { font-size: 2.2rem; }
   .tagline { font-size: 1.1rem; }
 }
+/* --- SPEZIELLE DESIGNS FÜR DIE WORKSHOP-UNTERSEITEN --- */
+
+.intro-text {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  opacity: 0.85;
+}
+
+.target-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.2rem;
+  max-width: 1400px;
+  margin: 0 auto 5rem;
+}
+
+.group-tile {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(25, 118, 210, 0.08);
+  padding: 3rem 2rem;
+  text-align: left;
+}
+
+.group-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0d47a1; /* Das tiefe Blau */
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.5rem;
+}
+
+.group-desc {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.flexibility-section {
+  max-width: 1100px;
+  margin: 0 auto 5rem;
+}
+
+.flexibility-section h2 {
+  font-size: 2.2rem;
+  color: #0d47a1;
+  margin-bottom: 2.5rem;
+}
+
+.flex-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.flex-card {
+  background: #f8fbfe; /* Sehr helles Blau */
+  border: 1px solid rgba(25, 118, 210, 0.15);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  text-align: left;
+}
+
+.flex-card h3 {
+  color: var(--color-accent); /* Logo-Rot */
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.philosophy-section {
+  max-width: 800px;
+  margin: 0 auto 5rem;
+  padding: 3rem 2rem;
+  background: linear-gradient(145deg, #e3f2fd, #ffffff); /* Heller Logo-Verlauf */
+  border-radius: var(--radius);
+  border: 1px solid rgba(25, 118, 210, 0.2);
+}
+
+.philosophy-section h2 {
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.philosophy-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.formats-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.format-tag {
+  background: var(--color-card);
+  border: 1px solid var(--color-card-hover);
+  color: #0d47a1;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.cta-box {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.cta-highlight {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #ffffff;
+  background: var(--color-accent);
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.cta-highlight:hover {
+  transform: scale(1.05);
+}
