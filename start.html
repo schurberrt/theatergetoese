@@ -9,10 +9,12 @@
   
   <style>
     :root {
-      --color-bg:        #0f0f1a;
-      --color-text:      #f0f0ff;
-      --color-accent:    #e94560;
-      --color-card:      #1a1a2e;
+      /* Farben basierend auf deinem Logo */
+      --color-bg:        #ffffff;
+      --color-text:      #1a2a3a;
+      --color-accent:    #d32f2f; /* Das Rot aus dem Logo-Schriftzug */
+      --color-card:      #e3f2fd; /* Ein helles, einladendes Blau */
+      --color-card-hover: #1976d2; /* Das kräftige Blau aus dem Logo */
       --radius:          16px;
     }
 
@@ -24,76 +26,118 @@
 
     body {
       font-family: system-ui, -apple-system, sans-serif;
-      background: var(--color-bg);
       color: var(--color-text);
       min-height: 100vh;
-      padding: 4rem 1rem 5rem;
+      padding: 3rem 1rem 5rem;
       text-align: center;
+      
+      /* --- HIER IST DER CSS-THEATERVORHANG --- */
+      background: 
+        /* Der geraffte Querbehang (Schabranke) ganz oben */
+        linear-gradient(to bottom, #a01010 0%, #700808 60%, transparent 100%) top center / 100% 60px no-repeat,
+        /* Linker Vorhang mit vertikalen Falten */
+        linear-gradient(to right, 
+          #500000 0%, #b01515 15%, #700808 30%, #b01515 45%, #500000 60%, 
+          #901010 75%, #600505 90%, transparent 100%) top left / 15% 100% no-repeat,
+        /* Rechter Vorhang mit vertikalen Falten */
+        linear-gradient(to left, 
+          #500000 0%, #b01515 15%, #700808 30%, #b01515 45%, #500000 60%, 
+          #901010 75%, #600505 90%, transparent 100%) top right / 15% 100% no-repeat,
+        /* Heller Hintergrund hinter dem Vorhang */
+        #f5f7fa; 
+      background-attachment: fixed;
+    }
+
+    /* Inhalts-Container, damit der Text vor dem Vorhang lesbar bleibt */
+    .page-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.95); /* Leicht transparentes Weiß */
+      padding: 3rem 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(5px); /* Macht den Hintergrund edel weich */
     }
 
     header {
-      margin-bottom: 6rem;
+      margin-bottom: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-container {
+      margin-bottom: 0.5rem;
+    }
+
+    .logo-container img {
+      display: block;
+      max-width: 140px;
+      height: auto;
     }
 
     h1 {
-      font-size: clamp(3.2rem, 11vw, 7rem);
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
       color: var(--color-accent);
-      margin-bottom: 0.8rem;
-      text-shadow: 0 4px 15px rgba(233,69,96,0.3);
+      margin-bottom: 0.5rem;
+      font-weight: 800;
     }
 
     .tagline {
-      font-size: 1.6rem;
-      opacity: 0.85;
+      font-size: 1.3rem;
+      color: #556677;
       max-width: 800px;
-      margin: 0 auto 1.5rem;
+      margin: 0 auto;
+      font-weight: 500;
     }
 
     .workshops-tiles {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2.2rem;
-      max-width: 1400px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
       margin: 0 auto;
-      padding: 0 1rem;
     }
 
     .workshop-tile {
       background: var(--color-card);
       border-radius: var(--radius);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      transition: all 0.3s ease;
+      box-shadow: 0 8px 24px rgba(25, 118, 210, 0.12);
+      transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                  background-color 0.3s ease, 
+                  box-shadow 0.3s ease;
       text-decoration: none;
-      color: inherit;
-      min-height: 200px;
+      color: #0d47a1;
+      min-height: 180px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .workshop-tile:hover {
-      transform: translateY(-14px) scale(1.02);
-      box-shadow: 0 24px 48px rgba(233,69,96,0.35);
+      transform: translateY(-10px) scale(1.03);
+      background: var(--color-card-hover);
+      color: #ffffff;
+      box-shadow: 0 16px 32px rgba(25, 118, 210, 0.3);
     }
 
     .workshop-title {
-      font-size: clamp(1.7rem, 5vw, 2.2rem);
+      font-size: clamp(1.4rem, 3.5vw, 1.7rem);
       font-weight: 700;
-      padding: 4rem 2.5rem;
-      color: #ffebee;
+      padding: 2rem 1.5rem;
       line-height: 1.3;
     }
 
     footer {
-      margin-top: 8rem;
-      padding: 3rem 1rem 2.5rem;
-      color: #8899aa;
-      font-size: 0.98rem;
-      border-top: 1px solid #222244;
+      margin-top: 6rem;
+      padding-top: 2rem;
+      color: #667788;
+      font-size: 0.95rem;
+      border-top: 1px solid #e0eaf5;
     }
 
     footer a {
-      color: #aaccff;
+      color: #1976d2;
       text-decoration: none;
       margin: 0 1rem;
     }
@@ -102,56 +146,58 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 900px) {
-      .workshop-title { padding: 3.5rem 2rem; font-size: 1.9rem; }
-      h1 { font-size: 2.5rem; }
-      body { padding: 4rem 1rem 7rem; }
-      header { margin-bottom: 5rem; }
-      .tagline { font-size: 1.4rem; }
-      .workshops-tiles {
-        gap: 1rem;
-        padding: 0 1rem;
+    /* Optimierung für kleinere Bildschirme */
+    @media (max-width: 768px) {
+      body {
+        /* Auf dem Handy klappen wir die Seitenvorhänge ein, um Platz für Text zu sparen */
+        background: #f5f7fa; 
+        padding: 1rem 0.5rem;
       }
-    }
-
-    @media (max-width: 600px) {
-      body { padding: 3rem 0.8rem 6rem; }
-      h1 { font-size: 2.5rem; }
-      .tagline { font-size: 1.3rem; }
-      .workshops-tiles {gap: 1rem}
-      .workshop-title { padding: 3.5rem 2rem; font-size: 2rem; }
+      .page-wrapper {
+        padding: 2rem 1rem;
+        box-shadow: none;
+        background: #ffffff;
+      }
+      header { margin-bottom: 3rem; }
+      h1 { font-size: 2.3rem; }
+      .tagline { font-size: 1.1rem; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>TheaterGetöse</h1>
-    <p class="tagline">Spontanität · Kreativität · Gemeinsames Lachen</p>
-    <div>
-      <img src="Logo 20kb.png" alt="pictures" witdh="150">
+  <!-- Der Wrapper hält alle Inhalte sauber getrennt vom Vorhang-Rand -->
+  <div class="page-wrapper">
+
+    <header>
+      <div class="logo-container">
+        <img src="Logo 20kb.png" alt="TheaterGetöse Logo">
+      </div>
+      <h1>TheaterGetöse</h1>
+      <p class="tagline">Spontanität · Kreativität · Gemeinsames Lachen</p>
+    </header>
+
+    <div class="workshops-tiles">
+      <a href="uber_mich.html" class="workshop-tile">
+        <div class="workshop-title">Über Mich</div>
+      </a>
+      <a href="improgetöse.html" class="workshop-tile">
+        <div class="workshop-title">ImproGetöse</div>
+      </a>
+      <a href="clownsgedönse.html" class="workshop-tile">
+        <div class="workshop-title">ClownsGedönse</div>
+      </a>
+      <a href="kindertheater.html" class="workshop-tile">
+        <div class="workshop-title">Kindertheater</div>
+      </a>
     </div>
-  </header>
 
-  <div class="workshops-tiles">
-    <a href="uber_mich.html" class="workshop-tile">
-      <div class="workshop-title">Über Mich</div>
-    </a>
-    <a href="improgetöse.html" class="workshop-tile">
-      <div class="workshop-title">ImproGetöse</div>
-    </a>
-    <a href="clownsgedönse.html" class="workshop-tile">
-      <div class="workshop-title">ClownsGedönse</div>
-    </a>
-    <a href="kindertheater.html" class="workshop-tile">
-      <div class="workshop-title">Kindertheater</div>
-    </a>
+    <footer>
+      <p>© 2026 – TheaterGetöse<br>
+         <a href="impressum.html">Impressum</a>  •   <a href="datenschutz.html">Datenschutz</a></p>
+    </footer>
+
   </div>
-
-  <footer>
-    <p> 2026 – TheaterGetöse<br>
-       <a href="impressum.html">Impressum</a>  •  <a href="datenschutz.html">Datenschutz</a></p>
-  </footer>
 
 </body>
 </html>
