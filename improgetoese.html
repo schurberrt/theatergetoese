@@ -1,75 +1,52 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Theater Workshops</title>
-    <style>
-              :root {
-            --color-bg:        #0f0f1a;
-            --color-text:      #f0f0ff;
-            --color-accent:    #e94560;
-            --color-card:      #1a1a2e;
-            --radius:          16px;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background: var(--color-bg);
-            color: var(--color-text);
-            min-height: 100vh;
-            padding: 4rem 1rem 5rem;
-            text-align: center;
-            }
-        header {
-            margin-bottom: 4rem;
-            }
-        h1{
-            font-size: clamp(2.5rem, 4vw + 1rem, 7rem);
-            line-height: 1.2;
-            font-weight: 600;
-            color: var(--color-accent);
-            margin-bottom: 0.8rem;
-            text-shadow: 0 4px 15px rgba(233,69,96,0.3);
-            }
-        .tagline {
-            font-size: 1.6rem;
-            opacity: 0.85;
-            max-width: 800px;
-            margin: 0 auto 1.5rem;
-            }
-        .main-content-box {
-            background: var(--color-card);
-            border-radius: var(--radius);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            min-height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-            }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ImproGetöse – TheaterGetöse</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Improgetöse</h1>
-     <p class="tagline">Improvisationstheater – spontan, lebendig, unvergesslich</p>
-    <div class="main-content-box">
-        <a>Keine Textvorgaben. Keine Regieanweisungen. Keine Wiederholungen - Nur der Moment zählt.
-          Theatergethöse aka. Improgethöse passt sich flexibel an Anlass und Publikum an - vo Humorvoll und mitreißend bis charmant und inspirierend.
-          Improvisationstheater bedeutet: mit Leichtigkeit genießen, gemeinsam lachen und den Augenblick feiern.</a>
-          </a>
+
+  <div class="page-wrapper">
+
+    <header>
+      <div class="logo-container">
+        <img src="Logo 20kb.png" alt="TheaterGetöse Logo">
+      </div>
+      <h1>ImproGetöse</h1>
+      <p class="tagline">Improvisationstheater – spontan, lebendig, unvergesslich</p>
+    </header>
+
+    <main>
+      <!-- Dein Text schön aufgeteilt in die Boxen -->
+      <div class="main-content-box">
+          <p>Keine Textvorgaben. Keine Regieanweisungen. Keine Wiederholungen – Nur der Moment zählt. 
+          TheaterGetöse aka. ImproGetöse passt sich flexibel an Anlass und Publikum an – von humorvoll und mitreißend bis charmant und inspirierend. 
+          Improvisationstheater bedeutet: mit Leichtigkeit genießen, gemeinsam lachen und den Augenblick feiern.</p>
+      </div>
+
+      <div class="main-content-box">
+          <p>Improvisationstheater ist pures Leben auf der Bühne. Aus dem Stegreif entstehen Szenen, Geschichten und Charaktere – inspiriert vom Publikum, getragen von Kreativität und Spielfreude. Jeder Abend ist einzigartig. Jede Show ein einmaliges Erlebnis.</p>
+      </div>
+
+      <div class="main-content-box">    
+          <p>Mit Leichtigkeit, Tempo und viel Humor entstehen überraschende Wendungen, berührende Augenblicke und vor allem: herzhaftes Lachen. Impro bringt Menschen zusammen, schafft Nähe und sorgt für echte, gemeinsame Momente.</p>
+      </div>
+    </main>
+
+    <!-- Der funktionierende Zurück-Button -->
+    <div style="text-align: center; margin: 3rem 0 1rem;">
+      <a href="index.html" class="cta-highlight">Zurück zur Startseite</a>
     </div>
-    <div class="main-content-box">
-        <a>Improvisationstheater ist pures Leben auf der Bühne. Aus dem Stegreif entstehen Szenen, Geschichten und Charaktere – inspiriert vom Publikum, getragen von Kreativität und Spielfreude. Jeder Abend ist einzigartig. Jede Show ein einmaliges Erlebnis.</a>
-    </div>
-    <div class="main-content-box">    
-        <a>Mit Leichtigkeit, Tempo und viel Humor entstehen überraschende Wendungen, berührende Augenblicke und vor allem: herzhaftes Lachen. Impro bringt Menschen zusammen, schafft Nähe und sorgt für echte, gemeinsame Momente.</a>
-    </div>
+
+    <!-- Deine vollständige Fußzeile -->
+    <footer>
+      <p>© 2026 – TheaterGetöse<br>
+         <a href="impressum.html">Impressum</a>  •   <a href="datenschutz.html">Datenschutz</a></p>
+    </footer>
+
+  </div>
+
 </body>
 </html>
