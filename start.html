@@ -27,24 +27,30 @@
       font-family: system-ui, -apple-system, sans-serif;
       color: var(--color-text);
       min-height: 100vh;
-      padding: 3rem 1.5rem 5rem;
+      /* Padding oben entspricht exakt der Höhe des oberen Vorhangs (50px) */
+      padding: 50px 1.5rem 5rem;
       text-align: center;
       
-      /* SCHÄRFERER GRAPHISCHER VORHANG (Streifen-Look für Faltenwurf) */
+      /* NATÜRLICHER, WEICHER THEATERVORHANG (Plastischer Faltenwurf) */
       background: 
-        /* Oberer Behang */
-        linear-gradient(to bottom, #800a0a, #800a0a 20px, #a01010 20px, #a01010 40px, #600505 40px, #600505 50px, transparent 50px) top center / 100% 100% no-repeat,
-        /* Linker Vorhang */
-        linear-gradient(to right, #500000 0%, #500000 15%, #901010 15%, #901010 35%, #b01515 35%, #b01515 65%, #700808 65%, #700808 85%, #400000 85%, #400000 100%) top left / 12% 100% no-repeat,
-        /* Rechter Vorhang */
-        linear-gradient(to left, #500000 0%, #500000 15%, #901010 15%, #901010 35%, #b01515 35%, #b01515 65%, #700808 65%, #700808 85%, #400000 85%, #400000 100%) top right / 12% 100% no-repeat,
+        /* Oberer Behang (Schabranke) mit weichem Schatten nach unten */
+        linear-gradient(to bottom, #7a0000 0%, #b31212 40%, #500000 85%, transparent 100%) top center / 100% 50px no-repeat,
+        /* Linker Vorhang mit weich verlaufenden Licht- und Schattenschmankerln */
+        linear-gradient(to right, 
+          #400000 0%, #a81313 18%, #600303 35%, #b81414 55%, #500101 75%, 
+          #981010 90%, transparent 100%) top left / 12% 100% no-repeat,
+        /* Rechter Vorhang spiegelverkehrt und weich fallend */
+        linear-gradient(to left, 
+          #400000 0%, #a81313 18%, #600303 35%, #b81414 55%, #500101 75%, 
+          #981010 90%, transparent 100%) top right / 12% 100% no-repeat,
+        /* Hintergrundfarbe hinter dem Vorhang */
         #f5f7fa;
       background-attachment: fixed;
     }
 
     .page-wrapper {
       max-width: 1000px;
-      margin: 20px auto 0;
+      margin: 25px auto 0;
       background: rgba(255, 255, 255, 0.98); 
       padding: 3rem 2rem;
       border-radius: var(--radius);
@@ -80,13 +86,13 @@
       font-weight: 500;
     }
 
-    /* ZENTRIERTE KACHELN: Flexbox sorgt für perfekte Mittigkeit bei jeder Anzahl */
+    /* Perfekt zentrierte Kacheln */
     .workshops-tiles {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center; /* Zentriert die Kacheln in der Zeile */
+      justify-content: center; 
       gap: 2rem;
-      max-width: 800px; /* Begrenzt die Breite für eine schöne 2x2 Anordnung */
+      max-width: 800px; 
       margin: 0 auto;
     }
 
@@ -100,8 +106,8 @@
       text-decoration: none;
       color: #0d47a1;
       min-height: 180px;
-      width: calc(50% - 1rem); /* Standardmäßig zwei Kacheln nebeneinander */
-      min-width: 260px; /* Verhindert, dass sie zu schmal werden */
+      width: calc(50% - 1rem); 
+      min-width: 260px; 
       display: flex;
       align-items: center;
       justify-content: center;
@@ -139,19 +145,19 @@
       text-decoration: underline;
     }
 
-    /* MOBIL-OPTIMIERUNG (Vorhang bleibt sichtbar, Kacheln untereinander) */
+    /* MOBIL-OPTIMIERUNG */
     @media (max-width: 768px) {
       body {
-        padding: 2.5rem 0.8rem 3rem; /* Platz für den oberen und seitlichen Vorhang */
-        /* Schmalerer Vorhang für mobile Bildschirme */
+        /* Verhindert jegliche Lücke über dem oberen Behang auf Mobilgeräten */
+        padding: 40px 0.5rem 3rem; 
         background-size: 100% 40px, 8% 100%, 8% 100%;
       }
       .page-wrapper {
         padding: 2rem 1rem;
-        margin-top: 15px;
+        margin-top: 10px;
       }
       .workshop-tile {
-        width: 100%; /* Auf dem Handy alle Kacheln vollflächig untereinander */
+        width: 100%; 
       }
       h1 { font-size: 2.2rem; }
       .tagline { font-size: 1.1rem; }
@@ -186,7 +192,7 @@
     </div>
 
     <footer>
-      <p>© 2026 – TheaterGetöse<br>
+      <p>© 2026 ClownsGedönse. Alle Rechte vorbehalten.e<br>
          <a href="impressum.html">Impressum</a>  •   <a href="datenschutz.html">Datenschutz</a></p>
     </footer>
 
@@ -194,4 +200,3 @@
 
 </body>
 </html>
-
