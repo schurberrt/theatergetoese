@@ -380,3 +380,46 @@ footer a:hover {
   50% { box-shadow: 0 8px 30px rgba(211, 47, 47, 0.4); transform: scale(1.01); }
   100% { box-shadow: 0 8px 24px rgba(211, 47, 47, 0.15); }
 }
+/* --- KONTAKT BEREICH STARTSEITE --- */
+.contact-section {
+  margin: 5rem auto 2rem;
+  padding: 2.5rem 2rem;
+  background: #f4f9ff; /* Ein helles, einladendes Blau passend zum Logo */
+  border-radius: var(--radius);
+  border: 1px solid rgba(25, 118, 210, 0.15);
+  max-width: 800px;
+}
+
+.contact-section h2 {
+  color: #0d47a1; /* Das tiefe Blau aus dem Logo */
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Interaktiver Hover-Effekt für die Links */
+.contact-item:hover {
+  color: var(--color-accent) !important; /* Wechselt zum Logo-Rot */
+  transform: translateY(-2px);
+}
+
+.contact-icon {
+  font-size: 1.4rem;
+}
