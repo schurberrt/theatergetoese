@@ -76,40 +76,12 @@ h1 {
 }
 
 .workshop-tile {
-  /* Verlauf von einem mittleren Blau (innen) zu einem edlen, dunkleren Blau (außen) */
-  background: radial-gradient(circle, #1976d2 0%, #0d47a1 100%);
-  border-radius: var(--radius);
-  
-  /* Der Schatten schimmert jetzt dezent in deinem Logo-Rot */
-  box-shadow: 0 8px 24px rgba(211, 47, 47, 0.25);
-  
-  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
-              background 0.3s ease, 
-              box-shadow 0.3s ease;
-  text-decoration: none;
-  
-  /* Die Schriftfarbe in den Kacheln wird auf Weiß gesetzt, damit sie auf dem dunkleren Blau perfekt lesbar ist */
-  color: #ffffff !important; 
-  
-  min-height: 180px;
-  width: calc(50% - 1rem); 
-  min-width: 260px; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Normaler Zustand der Kachel (für PC und Handy) */
-.workshop-tile {
   background: radial-gradient(circle, #1976d2 0%, #0d47a1 100%);
   border-radius: var(--radius);
   box-shadow: 0 8px 24px rgba(211, 47, 47, 0.25);
-  
-  /* Das sorgt dafür, dass die Kachel beim Loslassen butterweich wieder schrumpft */
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
               background 0.3s ease, 
               box-shadow 0.3s ease;
-              
   text-decoration: none;
   color: #ffffff !important; 
   min-height: 180px;
@@ -132,8 +104,9 @@ h1 {
 
 /* --- REAKTION NUR BEIM KURZEN ANVERSUCH / TIPPEN (Handy / Tablet) --- */
 .workshop-tile:active {
-  transform: scale(0.98); /* Die Kachel drückt sich beim Tippen ganz leicht rein */
+  transform: scale(0.98); 
   box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+}
 
 .workshop-title {
   font-size: clamp(1.4rem, 3.5vw, 1.7rem);
@@ -175,6 +148,7 @@ footer a:hover {
   h1 { font-size: 2.2rem; }
   .tagline { font-size: 1.1rem; }
 }
+
 /* --- SPEZIELLE DESIGNS FÜR DIE WORKSHOP-UNTERSEITEN --- */
 
 .intro-text {
@@ -205,7 +179,7 @@ footer a:hover {
 .group-title {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #0d47a1; /* Das tiefe Blau */
+  color: #0d47a1; 
   margin-bottom: 1rem;
   border-bottom: 2px solid var(--color-accent);
   padding-bottom: 0.5rem;
@@ -235,7 +209,7 @@ footer a:hover {
 }
 
 .flex-card {
-  background: #f8fbfe; /* Sehr helles Blau */
+  background: #f8fbfe; 
   border: 1px solid rgba(25, 118, 210, 0.15);
   border-radius: var(--radius);
   padding: 2.5rem 2rem;
@@ -243,7 +217,7 @@ footer a:hover {
 }
 
 .flex-card h3 {
-  color: var(--color-accent); /* Logo-Rot */
+  color: var(--color-accent); 
   font-size: 1.4rem;
   margin-bottom: 0.8rem;
 }
@@ -252,7 +226,7 @@ footer a:hover {
   max-width: 800px;
   margin: 0 auto 5rem;
   padding: 3rem 2rem;
-  background: linear-gradient(145deg, #e3f2fd, #ffffff); /* Heller Logo-Verlauf */
+  background: linear-gradient(145deg, #e3f2fd, #ffffff); 
   border-radius: var(--radius);
   border: 1px solid rgba(25, 118, 210, 0.2);
 }
@@ -311,6 +285,7 @@ footer a:hover {
 .cta-highlight:hover {
   transform: scale(1.05);
 }
+
 /* --- EXTRA DESIGN FÜR DIE ÜBER-MICH-TIMELINE & OPTIK --- */
 
 .timeline {
@@ -353,7 +328,6 @@ footer a:hover {
   margin-bottom: 0.5rem;
 }
 
-/* Stilvolle Checklisten */
 .check-list {
   list-style: none !important;
   padding-left: 0 !important;
@@ -374,7 +348,6 @@ footer a:hover {
   font-size: 1.2rem;
 }
 
-/* Großer Zitat-Kasten (Quote) */
 .quote-box {
   background: #f0f7ff;
   border-left: 5px solid #1976d2;
@@ -387,12 +360,12 @@ footer a:hover {
   text-align: center;
   box-shadow: 0 4px 15px rgba(25, 118, 210, 0.05);
 }
+
 /* --- GEBOOSTETE KACHEL (REISEN) --- */
 .tile-boosted {
   border: 2px solid var(--color-accent) !important;
   position: relative;
   overflow: hidden;
-  /* Sanfte Puls-Animation, um Aufmerksamkeit zu erregen */
   animation: pulse-border 2s infinite ease-in-out;
 }
 
@@ -412,22 +385,23 @@ footer a:hover {
 }
 
 @keyframes pulse-border {
-  0% { box-shadow: 0 8px 24px rgba(211, 47, 47, 0.15); }
-  50% { box-shadow: 0 8px 30px rgba(211, 47, 47, 0.4); transform: scale(1.01); }
-  100% { box-shadow: 0 8px 24px rgba(211, 47, 47, 0.15); }
+  0% { box-shadow: 0 8px 24px rgba(211, 47, 47, 0.25); }
+  50% { box-shadow: 0 8px 30px rgba(211, 47, 47, 0.6); transform: scale(1.01); }
+  100% { box-shadow: 0 8px 24px rgba(211, 47, 47, 0.25); }
 }
+
 /* --- KONTAKT BEREICH STARTSEITE --- */
 .contact-section {
   margin: 5rem auto 2rem;
   padding: 2.5rem 2rem;
-  background: #f4f9ff; /* Ein helles, einladendes Blau passend zum Logo */
+  background: #f4f9ff; 
   border-radius: var(--radius);
   border: 1px solid rgba(25, 118, 210, 0.15);
   max-width: 800px;
 }
 
 .contact-section h2 {
-  color: #0d47a1; /* Das tiefe Blau aus dem Logo */
+  color: #0d47a1; 
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
 }
@@ -450,9 +424,8 @@ footer a:hover {
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
-/* Interaktiver Hover-Effekt für die Links */
 .contact-item:hover {
-  color: var(--color-accent) !important; /* Wechselt zum Logo-Rot */
+  color: var(--color-accent) !important; 
   transform: translateY(-2px);
 }
 
