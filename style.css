@@ -76,14 +76,21 @@ h1 {
 }
 
 .workshop-tile {
-  background: var(--color-card);
+  /* Verlauf von einem mittleren Blau (innen) zu einem edlen, dunkleren Blau (außen) */
+  background: radial-gradient(circle, #1976d2 0%, #0d47a1 100%);
   border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgba(25, 118, 210, 0.12);
+  
+  /* Der Schatten schimmert jetzt dezent in deinem Logo-Rot */
+  box-shadow: 0 8px 24px rgba(211, 47, 47, 0.25);
+  
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
-              background-color 0.3s ease, 
+              background 0.3s ease, 
               box-shadow 0.3s ease;
   text-decoration: none;
-  color: #0d47a1;
+  
+  /* Die Schriftfarbe in den Kacheln wird auf Weiß gesetzt, damit sie auf dem dunkleren Blau perfekt lesbar ist */
+  color: #ffffff !important; 
+  
   min-height: 180px;
   width: calc(50% - 1rem); 
   min-width: 260px; 
@@ -92,11 +99,16 @@ h1 {
   justify-content: center;
 }
 
+/* Der Effekt, wenn man mit der Maus über die Kachel fährt */
 .workshop-tile:hover {
   transform: translateY(-10px) scale(1.03);
-  background: var(--color-card-hover);
-  color: #ffffff;
-  box-shadow: 0 16px 32px rgba(25, 118, 210, 0.3);
+  
+  /* Beim Hovern wird der Verlauf von innen nach außen noch etwas intensiver und tiefer */
+  background: radial-gradient(circle, #2196f3 0%, #0a3578 100%);
+  
+  /* Der rote Schatten wird beim Hovern größer und leuchtet stärker */
+  box-shadow: 0 16px 32px rgba(211, 47, 47, 0.45);
+  color: #ffffff !important;
 }
 
 .workshop-title {
