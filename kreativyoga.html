@@ -5,6 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KreativYoga – TheaterGetöse</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Sorgt für die responsive Spaltenaufteilung (Desktop: nebeneinander, Mobil: untereinander) */
+    .responsive-yoga-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+    .yoga-text {
+      flex: 1;
+      min-width: 260px;
+    }
+    .yoga-img-box {
+      flex: 0 0 260px;
+      width: 100%;
+      max-width: 260px;
+      margin: 0 auto;
+    }
+    /* Mobil-Optimierung für kleine Bildschirme */
+    @media (max-width: 650px) {
+      .responsive-yoga-grid {
+        flex-direction: column;
+      }
+      .yoga-img-box {
+        order: 2; /* Bild nach unten */
+      }
+      .yoga-text {
+        order: 1; /* Text nach oben */
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -25,14 +57,16 @@
 
       <p>Als Yogalehrerin vereine ich klassische Yogaelemente mit kreativen Theaterimpulsen, Achtsamkeit und spielerischen Methoden. So entsteht ein lebendiger Raum, in dem Bewegung, Kreativität und persönliche Entfaltung zusammenfinden.</p>
       
-      <!-- NEUES LAYOUT: Text links und das neue 4:3 Bild rechts daneben -->
-      <div style="display: grid; grid-template-columns: 1fr 260px; gap: 25px; align-items: center; margin-bottom: 3rem;">
-        <p style="margin: 0;">
-          Im KreativYoga geht es nicht um Leistung oder Perfektion, sondern um das Erleben. Die Teilnehmenden sind eingeladen, ihren Körper bewusst wahrzunehmen, neue Ausdrucksmöglichkeiten zu entdecken und ihre Kreativität in Bewegung zu bringen. Yogaübungen, Atemarbeit, kleine Improvisationen und kreative Elemente ergänzen sich zu einem ganzheitlichen Erlebnis.
-        </p>
-        <div>
-          <!-- Das 4:3 Bild (Breite 260px zu Höhe 195px entspricht exakt 4:3) -->
-          <img src="kreativ.jpeg" alt="pictures" style="width: 100%; height: 195px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: block;">
+      <!-- FLEXIBLES LAYOUT: Text links und 4:3 Bild rechts (Mobil untereinander) -->
+      <div class="responsive-yoga-grid">
+        <div class="yoga-text">
+          <p style="margin: 0;">
+            Im KreativYoga geht es nicht um Leistung oder Perfektion, sondern um das Erleben. Die Teilnehmenden sind eingeladen, ihren Körper bewusst wahrzunehmen, neue Ausdrucksmöglichkeiten zu entdecken und ihre Kreativität in Bewegung zu bringen. Yogaübungen, Atemarbeit, kleine Improvisationen und kreative Elemente ergänzen sich zu einem ganzheitlichen Erlebnis.
+          </p>
+        </div>
+        <div class="yoga-img-box">
+          <!-- height: 195px sichert bei 260px Breite das perfekte 4:3 Querformat -->
+          <img src="kreativ.jpeg" alt="KreativYoga Übung" style="width: 100%; height: 195px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: block;">
         </div>
       </div>
 
@@ -46,7 +80,7 @@
         <li>Mit mehr Leichtigkeit und Freude in den Alltag zu gehen</li>
       </ul>
 
-      <div class="philosophy-section" style="background: #f7f9fc; padding: 2rem; margin-top: 2rem;">
+      <div class="philosophy-section" style="background: #f7f9fc; padding: 2rem; margin-top: 2rem; border-radius: 6px;">
         <h2 style="font-size: 1.4rem; color: #0d47a1; border: none; padding: 0; margin-bottom: 0.5rem;">Interesse geweckt?</h2>
         <p style="margin: 0; font-size: 1.05rem;">KreativYoga richtet sich an alle, die Freude an Bewegung haben. Bei Interesse finden wir gemeinsam einen passenden Rahmen, einen geeigneten Raum und die entsprechende Möglichkeit zur Durchführung.</p>
         <p style="margin: 1rem 0 0; font-weight: 700; color: var(--color-accent);">Die Kurse finden ab einer Teilnehmerzahl von 5 Personen statt.</p>
