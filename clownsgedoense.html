@@ -4,8 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ClownsGedönse – TheaterGetöse</title>
-  <!-- Holt sich das vereinte Design -->
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Sorgt für das Spalten-Layout, das mobil sauber umbricht */
+    .show-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 3rem;
+      text-align: left;
+    }
+    .show-text {
+      flex: 1;
+      min-width: 280px;
+    }
+    .show-img-box {
+      flex: 0 0 240px;
+      width: 100%;
+      max-width: 240px;
+      margin: 0 auto;
+    }
+    /* Mobil-Regel: Bilder rutschen ohne Abschneiden nach unten */
+    @media (max-width: 650px) {
+      .show-grid {
+        flex-direction: column;
+      }
+      .show-img-box {
+        order: 2 !important;
+        max-width: 100%;
+      }
+      .show-text {
+        order: 1 !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -21,52 +54,64 @@
 
     <main class="main-content-box">
       
-      <p class="intro-text">
-        Bunt, humorvoll und herrlich unvorhersehbar! Mit meinen Clown-Auftritten bringe ich frischen Wind, herzhaftes Lachen und unvergessliche Momente auf deine Veranstaltung. Ob als interaktiver Walkact direkt unter den Gästen oder als charmantes Show-Highlight auf der Bühne – die rote Nase öffnet die Herzen des Publikums im Sturm. Perfekt für alle, die ihrem Event eine Prise Leichtigkeit und Poesie schenken wollen.
-      </p>
-
-      <!-- Bild 1 nutzt die volle Breite und skaliert mobil automatisch -->
-      <div style="margin-bottom: 3rem;">
-        <img src="clown1.jpeg" alt="Clown Show Auftritt" style="width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: block;">
+      <!-- BLOCK 1: Text links, Bild rechts (Mobil untereinander) -->
+      <div class="show-grid">
+        <div class="show-text">
+          <p class="intro-text" style="font-size: 1.25rem; color: #0d47a1; margin-bottom: 1rem; text-align: left;">
+            Bunt, humorvoll und herrlich unvorhersehbar!
+          </p>
+          <p style="margin: 0;">
+            Mit meinen Clown-Auftritten bringe ich frischen Wind, herzhaftes Lachen und unvergessliche Momente auf deine Veranstaltung. Ob als interaktiver Walkact direkt unter den Gästen oder als charmantes Show-Highlight auf der Bühne – die rote Nase öffnet die Herzen des Publikums im Sturm. Perfekt für alle, die ihrem Event eine Prise Leichtigkeit und Poesie schenken wollen.
+          </p>
+        </div>
+        <div class="show-img-box">
+          <img src="clown1.jpeg" alt="Clown Show Auftritt" style="width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: block;">
+        </div>
       </div>
 
-      <h2>Einsatzbereiche &amp; Formate</h2>
-      <p>
-        Jedes Event ist einzigartig, deshalb passen sich meine Figuren flexibel dem Rahmen an. Vom charmanten Empfang der Gäste über spielerische Slapstick-Einlagen bis hin zu maßgeschneiderten Walkacts – die Performance lebt vom Moment und der Interaktion mit den Menschen vor Ort.
-      </p>
-
-      <!-- Bild 2 als optischer Trenner -->
-      <div style="margin: 3rem 0;">
-        <img src="clown2.jpeg" alt="Clown Walkact Interaktion" style="width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: block;">
+      <!-- BLOCK 2: Text rechts, Bild links (Mobil untereinander) -->
+      <div class="show-grid">
+        <div class="show-text">
+          <h2>Einsatzbereiche &amp; Formate</h2>
+          <p style="margin: 0;">
+            Jedes Event ist einzigartig, deshalb passen sich meine Figuren flexibel dem Rahmen an. Vom charmanten Empfang der Gäste über spielerische Slapstick-Einlagen bis hin zu maßgeschneiderten Walkacts – die Performance lebt vom Moment und der Interaktion mit den Menschen vor Ort.
+          </p>
+        </div>
+        <!-- order: -1 schiebt das Bild am Desktop nach links, mobil rutscht es nach unten -->
+        <div class="show-img-box" style="order: -1;">
+          <img src="clown2.jpeg" alt="Clown Walkact Interaktion" style="width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: block;">
+        </div>
       </div>
 
-      <!-- Nutzt exakt deine vordefinierte Philosophie-Box aus der CSS -->
-      <div class="philosophy-section">
-        <h2>Unsere Philosophie</h2>
-        <p>Ein Clown scheitert nicht – er feiert das Scheitern! Auf der Bühne und im Spiel geht es nicht um Perfektion, sondern um echte, ehrliche Emotionen. Es ist die Kunst, dem Publikum im richtigen Augenblick ein Lächeln ins Gesicht zu zaubern und den Alltag für einen Moment komplett zu vergessen.</p>
+      <!-- BLOCK 3: Text links, Bild rechts (Mobil untereinander) -->
+      <div class="show-grid">
+        <div class="show-text">
+          <div class="philosophy-section" style="margin: 0; padding: 2rem;">
+            <h2>Unsere Philosophie</h2>
+            <p style="margin: 0;">Ein Clown scheitert nicht – er feiert das Scheitern! Auf der Bühne und im Spiel geht es nicht um Perfektion, sondern um echte, ehrliche Emotionen. Es ist die Kunst, dem Publikum im richtigen Augenblick ein Lächeln ins Gesicht zu zaubern und den Alltag für einen Moment komplett zu vergessen.</p>
+          </div>
+        </div>
+        <div class="show-img-box">
+          <img src="clown3.jpeg" alt="Clown Emotionen" style="width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: block;">
+        </div>
       </div>
 
-      <!-- Bild 3 vor den Tags -->
-      <div style="margin-bottom: 3rem;">
-        <img src="clown3.jpeg" alt="Clown Emotionen" style="width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: block;">
-      </div>
-
-      <!-- Nutzt deine CSS-Klassen für die Tags -->
-      <div class="formats-list">
+      <!-- Deine CSS-Tags -->
+      <div class="formats-list" style="margin-top: 3rem;">
         <span class="format-tag">✨ Sommerfeste</span>
         <span class="format-tag">🎈 Kindergeburtstage</span>
         <span class="format-tag">🎉 Firmenevents</span>
         <span class="format-tag">🎭 Stadtfeste</span>
       </div>
 
-      <!-- Nutzt deine CSS-Klasse für die CTA-Box -->
-      <div class="cta-box">
+      <!-- Deine CSS-CTA-Box -->
+      <div class="cta-box" style="margin-top: 3rem;">
         <p><strong>Du suchst das passende Highlight für dein Event?</strong><br>
         Lass uns gemeinsam herausfinden, welches Show-Format am besten zu deinen Gästen passt!</p>
       </div>
     </main>
 
-    <!-- Zurück-Button nutzt deine cta-highlight Klasse -->
+    <!-- Zurück-Button -->
     <div style="text-align: center; margin: 3rem 0 1rem;">
       <a href="index.html" class="cta-highlight">Zurück zur Startseite</a>
     </div>
