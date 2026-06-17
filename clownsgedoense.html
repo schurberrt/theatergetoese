@@ -6,6 +6,38 @@
   <title>ClownsGedönse – TheaterGetöse</title>
   <!-- Holt sich das vereinte Design -->
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Diese kleine Ergänzung sorgt dafür, dass die Spalten auf Handys automatisch untereinander springen */
+    .responsive-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+    .grid-text {
+      flex: 1;
+      min-width: 250px;
+    }
+    .grid-img {
+      flex: 0 0 220px;
+      width: 100%;
+      max-width: 220px;
+      margin: 0 auto;
+    }
+    /* Erzwingt auf kleinen Bildschirmen, dass das Bild unter dem Text steht */
+    @media (max-width: 600px) {
+      .responsive-grid {
+        flex-direction: column;
+      }
+      .grid-img {
+        order: 2; /* Bild nach unten */
+      }
+      .grid-text {
+        order: 1; /* Text nach oben */
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -15,40 +47,59 @@
       <div class="logo-container">
         <img src="Logo 20kb.png" alt="TheaterGetöse Logo">
       </div>
-      <!-- Das ist jetzt die einzige Hauptüberschrift auf der Seite -->
       <h1>ClownsGedönse</h1>
       <p class="tagline">Die Kunst des Scheiterns &amp; roter Nasen</p>
     </header>
 
     <main class="main-content-box">
       
-      <!-- BILD 1: Rechts neben dem Intro-Text -->
-      <div style="display: grid; grid-template-columns: 1fr 220px; gap: 25px; align-items: center; margin-bottom: 3rem;">
-        <p class="intro-text" style="margin-bottom: 0;">
-          Willkommen in der Welt der Clownerie! Hier gibt es keinen Druck und keine Fehler – nur die pure Freude am Ausprobieren und gemeinsamen Lachen. Wir setzen die rote Nase auf und entdecken die Freiheit, einfach mal albern zu sein und die Welt mit neugierigen Augen zu sehen. Bring einfach deine Spielfreude mit!<br><br>
-          Die rote Nase ist der kleinste Maskentyp der Welt, öffnet aber die größten Türen zu Fantasie und Freiheit.
-        </p>
-        <div>
-          <img src="clown1.jpeg" alt="pictures" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: block;">
+      <!-- BILD 1: Rechts neben dem Intro-Text (Mobil: Unten) -->
+      <div class="responsive-grid">
+        <div class="grid-text">
+          <p class="intro-text" style="margin-bottom: 0;">
+            Willkommen in der Welt der Clownerie! Hier gibt es keinen Druck und keine Fehler – nur die pure Freude am Ausprobieren und gemeinsamen Lachen. Wir setzen die rote Nase auf und entdecken die Freiheit, einfach mal albern zu sein und die Welt mit neugierigen Augen zu sehen. Bring einfach deine Spielfreude mit!<br><br>
+            Die rote Nase ist der kleinste Maskentyp der Welt, öffnet aber die größten Türen zu Fantasie und Freiheit.
+          </p>
+        </div>
+        <div class="grid-img">
+          <img src="clown1.jpeg" alt="Clown Performance" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: block;">
         </div>
       </div>
 
-
-      <!-- BILD 2: Links neben der Flexibilitäts-Sektion -->
-      <div style="display: grid; grid-template-columns: 220px 1fr; gap: 25px; align-items: center; margin-top: 3rem; margin-bottom: 3rem;">
-        <div>
-          <img src="clown2.jpeg" alt="pictures" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: block;">
+      <!-- BILD 2: Links neben den Flex-Karten (Mobil: Unten) -->
+      <div class="responsive-grid">
+        <!-- Im Code steht das Bild nun nach dem Text, damit es mobil unten landet. Am Desktop schieben wir es visuell nach links -->
+        <div class="grid-text">
+          <div class="flexibility-section" style="margin: 0;">
+            <h2>Flexibel &amp; Anpassbar</h2>
+            <div class="flex-grid" style="margin: 0;">
+              <div class="flex-card">
+                <h3>Wochenend-Workshops</h3>
+                <p>Intensive Tage voller Energie, ideal zum Reinschnuppern und Auspowern.</p>
+              </div>
+              <div class="flex-card">
+                <h3>Fortlaufende Kurse</h3>
+                <p>Regelmäßiges Training, um tiefer in die Materie der Clownerie einzutauchen.</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-
-      <!-- BILD 3: Rechts neben der Philosophie -->
-      <div style="display: grid; grid-template-columns: 1fr 220px; gap: 25px; align-items: center; margin-bottom: 3rem;">
-        <div class="philosophy-section" style="margin: 0;">
-          <h2>Unsere Philosophie</h2>
-          <p style="margin: 0;">Ein Clown scheitert nicht – er feiert das Scheitern! Es geht nicht darum, perfekt zu sein, sondern im Moment präsent zu sein und dem Publikum ein echtes, ehrliches Lächeln ins Gesicht zu zaubern.</p>
+        <!-- style="order: -1" sorgt am Desktop dafür, dass das Bild links steht, mobil wird es durch das CSS oben aufgehoben -->
+        <div class="grid-img" style="order: -1;">
+          <img src="clown2.jpeg" alt="Clown Workshop" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: block;">
         </div>
-        <div>
-          <img src="clown3.jpeg" alt="pictures" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: block;">
+      </div>
+
+      <!-- BILD 3: Rechts neben der Philosophie (Mobil: Unten) -->
+      <div class="responsive-grid" style="margin-top: 3rem;">
+        <div class="grid-text">
+          <div class="philosophy-section" style="margin: 0;">
+            <h2>Unsere Philosophie</h2>
+            <p style="margin: 0;">Ein Clown scheitert nicht – er feiert das Scheitern! Es geht nicht darum, perfekt zu sein, sondern im Moment präsent zu sein und dem Publikum ein echtes, ehrliches Lächeln ins Gesicht zu zaubern.</p>
+          </div>
+        </div>
+        <div class="grid-img">
+          <img src="clown3.jpeg" alt="Clown Philosophie" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: block;">
         </div>
       </div>
 
@@ -63,12 +114,12 @@
       </div>
     </main>
 
-    <!-- Zurück-Button verlinkt jetzt wieder korrekt auf start.html -->
+    <!-- Zurück-Button -->
     <div style="text-align: center; margin: 3rem 0 1rem;">
       <a href="index.html" class="cta-highlight">Zurück zur Startseite</a>
     </div>
 
-    <!-- Deine vollständige Fußzeile -->
+    <!-- Vollständige Fußzeile -->
     <footer>
       <p>© 2026 – TheaterGetöse<br>
          <a href="impressum.html">Impressum</a>  •   <a href="datenschutz.html">Datenschutz</a></p>
