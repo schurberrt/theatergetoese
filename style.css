@@ -276,6 +276,7 @@ h1 {
   color: var(--color-text);
   max-width: 650px;
   margin: 0 auto;
+  text-align: center;
 }
 
 /* ZURÜCK BUTTONS */
