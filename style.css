@@ -99,17 +99,41 @@ h1 {
   justify-content: center;
 }
 
-/* Der Effekt, wenn man mit der Maus über die Kachel fährt */
-.workshop-tile:hover {
-  transform: translateY(-10px) scale(1.03);
+/* Normaler Zustand der Kachel (für PC und Handy) */
+.workshop-tile {
+  background: radial-gradient(circle, #1976d2 0%, #0d47a1 100%);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(211, 47, 47, 0.25);
   
-  /* Beim Hovern wird der Verlauf von innen nach außen noch etwas intensiver und tiefer */
-  background: radial-gradient(circle, #2196f3 0%, #0a3578 100%);
-  
-  /* Der rote Schatten wird beim Hovern größer und leuchtet stärker */
-  box-shadow: 0 16px 32px rgba(211, 47, 47, 0.45);
-  color: #ffffff !important;
+  /* Das sorgt dafür, dass die Kachel beim Loslassen butterweich wieder schrumpft */
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              background 0.3s ease, 
+              box-shadow 0.3s ease;
+              
+  text-decoration: none;
+  color: #ffffff !important; 
+  min-height: 180px;
+  width: calc(50% - 1rem); 
+  min-width: 260px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* --- NUR FÜR GERÄTE MIT EINER MAUS (PC / Laptop) --- */
+@media (hover: hover) {
+  .workshop-tile:hover {
+    transform: translateY(-10px) scale(1.03);
+    background: radial-gradient(circle, #2196f3 0%, #0a3578 100%);
+    box-shadow: 0 16px 32px rgba(211, 47, 47, 0.45);
+    color: #ffffff !important;
+  }
+}
+
+/* --- REAKTION NUR BEIM KURZEN ANVERSUCH / TIPPEN (Handy / Tablet) --- */
+.workshop-tile:active {
+  transform: scale(0.98); /* Die Kachel drückt sich beim Tippen ganz leicht rein */
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
 
 .workshop-title {
   font-size: clamp(1.4rem, 3.5vw, 1.7rem);
