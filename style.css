@@ -5,6 +5,7 @@
   --color-card:      #e3f2fd; 
   --color-card-hover: #1976d2; 
   --radius:          16px;
+  --spacing-bottom:  15rem; 
 }
 
 * {
