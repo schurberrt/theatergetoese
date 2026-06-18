@@ -8,10 +8,21 @@
   <link rel="stylesheet" href="style.css">
   
   <style>
+      <!-- Diese Anpassungen gelten NUR für die Clowns-Seite -->
+  <style>
+    /* PC: Setzt die Ausrichtung zurück auf die Mitte (ursprünglicher Zustand) */
     .show-grid {
-      align-items: flex-start !important;
+      align-items: center !important;
     }
     
+    /* Schneidet NUR das zweite Bild auf ein sauberes 3:4 Hochformat zu, damit es nicht zu hoch baut */
+    .show-grid:nth-of-type(2) .show-img-box img {
+      width: 100% !important;
+      height: 320px !important; /* Exaktes 3:4 Verhältnis bei 240px Breite */
+      object-fit: cover !important; /* Verhindert Verzerrungen beim Zuschneiden */
+    }
+    
+    /* Mobil: Bilder bleiben kompakt bei 240px Breite und rutschen unter den Text */
     @media (max-width: 650px) {
       .show-grid {
         align-items: center !important; 
@@ -21,6 +32,8 @@
         flex: 0 0 240px !important;
       }
     }
+  </style>
+
   </style>
 </head>
 <body>
