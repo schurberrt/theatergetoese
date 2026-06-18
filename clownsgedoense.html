@@ -4,36 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ClownsGedönse – TheaterGetöse</title>
-  
   <link rel="stylesheet" href="style.css">
-  
   <style>
-      <!-- Diese Anpassungen gelten NUR für die Clowns-Seite -->
-  <style>
-    /* PC: Setzt die Ausrichtung zurück auf die Mitte (ursprünglicher Zustand) */
+    /* Sorgt für das Spalten-Layout */
     .show-grid {
-      align-items: center !important;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center; /* Ursprüngliche vertikale Zentrierung */
+      margin-bottom: 3rem;
+      text-align: left;
     }
-    
-    /* Schneidet NUR das zweite Bild auf ein sauberes 3:4 Hochformat zu, damit es nicht zu hoch baut */
+    .show-text {
+      flex: 1;
+      min-width: 280px;
+    }
+    .show-img-box {
+      flex: 0 0 240px;
+      width: 100%;
+      max-width: 240px;
+      margin: 0 auto;
+    }
+
     .show-grid:nth-of-type(2) .show-img-box img {
-      width: 100% !important;
-      height: 320px !important; /* Exaktes 3:4 Verhältnis bei 240px Breite */
-      object-fit: cover !important; /* Verhindert Verzerrungen beim Zuschneiden */
+      height: 180px !important;
+      object-fit: cover !important; /* Bild wird zentriert beschnitten, nicht verzerrt */
     }
-    
-    /* Mobil: Bilder bleiben kompakt bei 240px Breite und rutschen unter den Text */
+
+    /* Mobil-Regel: Bilder rutschen sauber nach unten und bleiben kompakt */
     @media (max-width: 650px) {
       .show-grid {
-        align-items: center !important; 
+        flex-direction: column;
       }
       .show-img-box {
-        width: 240px !important; 
-        flex: 0 0 240px !important;
+        order: 2 !important;
+        width: 240px !important; /* Verhindert das riesige Strecken auf Handys */
+        max-width: 100%;
+      }
+      .show-text {
+        order: 1 !important;
       }
     }
-  </style>
-
   </style>
 </head>
 <body>
@@ -49,18 +60,23 @@
     </header>
 
     <main class="main-content-box">
-    
+      
+      <!-- BLOCK 1: Text links, Bild rechts -->
       <div class="show-grid">
         <div class="show-text">
-          <h2>Bunt, humorvoll und herrlich unvorhersehbar!</h2>
+          <p class="intro-text" style="font-size: 1.25rem; color: #0d47a1; margin-bottom: 1rem; text-align: left;">
+            Bunt, humorvoll und herrlich unvorhersehbar!
+          </p>
           <p style="margin: 0;">
-            Mit meinen Clown-Auftritten bringe ich frischen Wind, herzhaftes Lachen und unvergessliche Momente auf deine Veranstaltung. Ob als interaktiver Walkact direkt unter den Gästen oder als charmantes Show-Highlight auf der Bühne – die rote Nase öffnet die Herzen des Publikums im Sturm. Perfekt für alle, die ihrem Event eine Prise Leichtigkeit und Poesie schenken wollen.</p>
+            Mit meinen Clown-Auftritten bringe ich frischen Wind, herzhaftes Lachen und unvergessliche Momente auf deine Veranstaltung. Ob als interaktiver Walkact direkt unter den Gästen oder als charmantes Show-Highlight auf der Bühne – die rote Nase öffnet die Herzen des Publikums im Sturm. Perfekt für alle, die ihrem Event eine Prise Leichtigkeit und Poesie schenken wollen.
+          </p>
         </div>
         <div class="show-img-box">
           <img src="clown1.jpeg" alt="Clown Show Auftritt" style="width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: block;">
         </div>
       </div>
-      
+
+      <!-- BLOCK 2: Text rechts, Bild links (Zuschnitt greift hier) -->
       <div class="show-grid">
         <div class="show-text">
           <h2>Einsatzbereiche &amp; Formate</h2>
@@ -73,6 +89,7 @@
         </div>
       </div>
 
+      <!-- BLOCK 3: Text links, Bild rechts -->
       <div class="show-grid">
         <div class="show-text">
           <div class="philosophy-section" style="margin: 0; padding: 2rem;">
@@ -109,6 +126,4 @@
   </div>
 
 </body>
-</html>
-
 </html>
