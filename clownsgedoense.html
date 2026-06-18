@@ -26,9 +26,11 @@
       margin: 0 auto;
     }
 
+    /* NEU: Schneidet das 2. Bild perfekt mit Fokus auf das Gesicht zu */
     .show-grid:nth-of-type(2) .show-img-box img {
-      height: 180px !important;
-      object-fit: cover !important; /* Bild wird zentriert beschnitten, nicht verzerrt */
+      height: 200px !important; /* Etwas mehr Höhe für dieses Hochkant-Motiv */
+      object-fit: cover !important; /* Aktiviert den Bild-Zuschnitt */
+      object-position: center 10% !important; /* ÄNDERUNG: Schiebt den Fokus nach oben direkt aufs Gesicht! */
     }
 
     /* Mobil-Regel: Bilder rutschen sauber nach unten und bleiben kompakt */
@@ -64,8 +66,7 @@
       <!-- BLOCK 1: Text links, Bild rechts -->
       <div class="show-grid">
         <div class="show-text">
-          <p class="intro-text" style="font-size: 1.25rem; color: #0d47a1; margin-bottom: 1rem; text-align: left;">
-            Bunt, humorvoll und herrlich unvorhersehbar!
+            <h2>Bunt, humorvoll und herrlich unvorhersehbar!</h2>
           </p>
           <p style="margin: 0;">
             Mit meinen Clown-Auftritten bringe ich frischen Wind, herzhaftes Lachen und unvergessliche Momente auf deine Veranstaltung. Ob als interaktiver Walkact direkt unter den Gästen oder als charmantes Show-Highlight auf der Bühne – die rote Nase öffnet die Herzen des Publikums im Sturm. Perfekt für alle, die ihrem Event eine Prise Leichtigkeit und Poesie schenken wollen.
