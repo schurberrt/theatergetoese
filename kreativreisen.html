@@ -5,6 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Theater- und Kreativreisen – TheaterGetöse</title>
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Repariert das Layout der beiden Flyer-Bilder auf Smartphones -->
+  <style>
+    .flyer-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 1.5rem;
+    }
+    .flyer-img {
+      width: 100%;
+      max-width: 320px; /* Perfekte Größe für quadratische 1:1 Flyer am PC */
+      aspect-ratio: 1 / 1; /* Erzwingt das quadratische 1:1 Format */
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    
+    @media (max-width: 650px) {
+      .flyer-container {
+        flex-direction: column; /* Mobil untereinander stapeln */
+        align-items: center;
+        gap: 15px;
+      }
+      .flyer-img {
+        max-width: 280px; /* Leicht verkleinert für schmale Handy-Bildschirme */
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -14,7 +43,7 @@
       <div class="logo-container">
         <img src="Logo 20kb.png" alt="TheaterGetöse Logo">
       </div>
-      <h1>Theater- & Kreativreisen</h1>
+      <h1>Theater- &amp; Kreativreisen</h1>
       <p class="tagline">Kreatives Arbeiten und gemeinschaftliches Erleben fernab des Alltags</p>
     </header>
 
@@ -33,7 +62,7 @@
         <p style="margin: 0; font-style: italic;">Eine Woche voller Kreativität, Inspiration und Lebensfreude in der wunderschönen Landschaft der Toskana.</p>
       </div>
 
-      <h2>Die Dozentinnen & Workshops (03.08. – 07.08.2026)</h2>
+      <h2>Die Dozentinnen &amp; Workshops (03.08. – 07.08.2026)</h2>
       <p>Jedes Modul umfasst täglich etwa zwei Stunden und kann einzeln oder in Kombination gebucht werden. So stellen Sie Ihr ganz individuelles Programm zusammen:</p>
       <ul class="check-list" style="margin-bottom: 3rem;">
         <li><strong>Susi Wimmer</strong> – Clownkurs</li>
@@ -63,9 +92,16 @@
         </div>
       </div>
 
+      <!-- KORRIGIERT: DER PREISE-BLOCK ENTHÄLT NUN DIE BEIDEN 1:1 FLYER -->
       <div class="flex-card" style="text-align: center; background: #f0f7ff;">
-        <h3 style="margin-bottom: 0.5rem;">Preise und weitere Informationen</h3>
-        <p style="margin: 0;">Detaillierte Informationen zu Preisen, Unterkunftsmöglichkeiten und Buchungsbedingungen entnehmen Sie bitte dem <strong>aktuellen Flyer</strong>.</p>
+        <h3 style="margin-bottom: 0.5rem; color: #0d47a1;">Preise und weitere Informationen</h3>
+        <p style="margin-bottom: 1rem;">Detaillierte Informationen zu Preisen, Unterkunftsmöglichkeiten und Buchungsbedingungen entnehmen Sie bitte unserem Flyer:</p>
+        
+        <!-- Flyer Bilder-Box -->
+        <div class="flyer-container">
+          <img src="reise_flyerF.jpg" alt="Kreativreise Flyer Vorderseite" class="flyer-img">
+          <img src="reise_flyerB.jpg" alt="Kreativreise Flyer Rückseite" class="flyer-img">
+        </div>
       </div>
     </main>
 
