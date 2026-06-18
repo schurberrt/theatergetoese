@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kindertheater – TheaterGetöse</title>
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Diese Anpassungen reparieren das Layout auf Smartphones -->
+  <style>
+    /* Desktop-Standard: Text links, Bild rechts */
+    .theater-grid-180 { display: grid; grid-template-columns: 1fr 180px; gap: 20px; align-items: center; }
+    .theater-grid-200 { display: grid; grid-template-columns: 1fr 200px; gap: 20px; align-items: center; }
+
+    /* Mobil-Regel: Text und Bild rutschen sauber untereinander */
+    @media (max-width: 650px) {
+      .theater-grid-180, .theater-grid-200 {
+        grid-template-columns: 1fr; /* Schaltet auf eine einzige Spalte um */
+        gap: 15px;
+      }
+      /* Zentriert die Bilder mobil und sorgt für eine schöne Optik */
+      .theater-grid-180 img, .theater-grid-200 img {
+        margin: 0 auto;
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -27,9 +47,9 @@
         Unsere Stücke begeistern Kinder nicht nur durch spannende Geschichten, Musik und Mitmach-Momente, sondern vermitteln zugleich wertvolle Botschaften, die nachhaltig wirken.
       </p>
 
-      <!-- Highlight-Box für das erste Theaterstück: JETZT MIT BILD 1 (1:1 Quadrat) -->
+      <!-- Highlight-Box für das erste Theaterstück: JETZT REPRÄSENTATIV UND MOBIL-OPTIMIERT -->
       <div class="philosophy-section" style="margin-bottom: 3rem; padding: 2rem; background: #f4f9ff;">
-        <div style="display: grid; grid-template-columns: 1fr 180px; gap: 20px; align-items: center;">
+        <div class="theater-grid-180">
           <div>
             <h2 style="font-size: 1.6rem; color: #0d47a1; border: none; padding: 0; margin-bottom: 0.8rem;">🎭 Theaterstück: „Bojar sucht Farben“</h2>
             <p style="font-size: 1.1rem; line-height: 1.6; margin: 0;">
@@ -55,8 +75,9 @@
         Darüber hinaus bieten wir kreative Theaterworkshops für Kindergruppen an und entwickeln fortlaufend neue, tiefgründige Geschichten zu gesellschaftlich relevanten Themen.
       </p>
 
+      <!-- Highlight-Box für das zweite Theaterstück -->
       <div class="philosophy-section" style="margin-bottom: 3rem; padding: 2rem; background: #f4f9ff;">
-        <div style="display: grid; grid-template-columns: 1fr 200px; gap: 20px; align-items: center;">
+        <div class="theater-grid-200">
           <div>
             <h2 style="font-size: 1.6rem; color: #0d47a1; border: none; padding: 0; margin-bottom: 0.8rem;">🤖 Theaterstück: „Demo der Demokratie-Affe“</h2>
             <p style="font-size: 1.1rem; line-height: 1.6; margin: 0;">
@@ -64,7 +85,7 @@
             </p>
           </div>
           <div>
-            <img src="ktheater2.jpeg" alt="pictures" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: block;">
+            <img src="Demo_der_Demokratie_Affe.jpeg" alt="pictures" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: block;">
           </div>
         </div>
       </div>
