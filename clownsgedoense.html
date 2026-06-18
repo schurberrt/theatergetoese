@@ -32,7 +32,11 @@
       object-fit: cover !important; /* Aktiviert den Bild-Zuschnitt */
       object-position: center 10% !important; /* ÄNDERUNG: Schiebt den Fokus nach oben direkt aufs Gesicht! */
     }
-
+     @media (min-width: 651px) {
+        .show-grid:nth-of-type(2) .show-img-box {
+          margin-top: 25px; /* Schiebt das Bild ein Stück tiefer */
+        }
+     }
     /* Mobil-Regel: Bilder rutschen sauber nach unten und bleiben kompakt */
     @media (max-width: 650px) {
       .show-grid {
