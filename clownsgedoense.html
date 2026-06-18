@@ -4,38 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ClownsGedönse – TheaterGetöse</title>
+  
+  <!-- 1. Deine unveränderte Haupt-CSS-Datei wird geladen -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- 2. Hier sind die exklusiven Reparaturen NUR für diese eine Seite -->
   <style>
-    /* Sorgt für das Spalten-Layout, das mobil sauber umbricht */
+    /* PC: Überschreibt das alte Verhalten, damit Text und Bild oben bündig starten */
     .show-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      align-items: center;
-      margin-bottom: 3rem;
-      text-align: left;
+      align-items: flex-start !important;
     }
-    .show-text {
-      flex: 1;
-      min-width: 280px;
-    }
-    .show-img-box {
-      flex: 0 0 240px;
-      width: 100%;
-      max-width: 240px;
-      margin: 0 auto;
-    }
-    /* Mobil-Regel: Bilder rutschen ohne Abschneiden nach unten */
+    
+    /* Mobil: Überschreibt die Bildgrößen, damit sie auf Smartphones kompakt bleiben */
     @media (max-width: 650px) {
       .show-grid {
-        flex-direction: column;
+        align-items: center !important; 
       }
       .show-img-box {
-        order: 2 !important;
-        max-width: 100%;
-      }
-      .show-text {
-        order: 1 !important;
+        width: 240px !important; 
+        flex: 0 0 240px !important;
       }
     }
   </style>
@@ -123,4 +110,6 @@
   </div>
 
 </body>
+</html>
+
 </html>
