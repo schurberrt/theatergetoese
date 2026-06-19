@@ -49,15 +49,16 @@
       </p>
       
     <!-- DIE NEUE KONTAKT- & INSTAGRAM-SEKTION -->
+     <!-- DIE NEUE KONTAKT- & INSTAGRAM-SEKTION -->
     <section class="contact-section">
       <h2>Kontakt &amp; Austausch</h2>
-      <div class="contact-grid">
+      <div class="contact-grid" style="align-items: flex-end;"> <!-- Richtet alle Boxen unten bündig aus -->
         
-        <!-- Name UND das kreisrunde Bild direkt darunter -->
-        <span class="contact-item" style="cursor: default; pointer-events: none; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px;">
-          <img src="Sabine_Eberling.png" alt="Sabine Eberling" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: block;">
-          <span><span class="contact-icon">👤</span> Sabine Eberling</span>
-        </span>
+        <!-- Deine Box: Bild DIREKT über dem Namen, optisch perfekt eingepasst -->
+        <div class="contact-item" style="cursor: default; pointer-events: none; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 15px; height: auto;">
+          <img src="Sabine_Eberling.png" alt="Sabine Eberling" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.15); display: block;">
+          <span style="font-weight: bold;"><span class="contact-icon">👤</span> Sabine Eberling</span>
+        </div>
 
         <a href="mailto:Theatergetoese@gmail.com" class="contact-item">
           <span class="contact-icon">✉️</span> TheaterGetoese@gmail.com
@@ -65,7 +66,7 @@
         <a href="tel:+4917624844708" class="contact-item">
           <span class="contact-icon">📞</span> 0176 24844708
         </a>
-        <a href="https://instagram.com/improgetoese/" class="contact-item" target="_blank" rel="noopener">
+        <a href="https://instagram.com" class="contact-item" target="_blank" rel="noopener">
           <span class="contact-icon">
           <!-- SVG-Code für das Instagram-Logo -->
           <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="vertical-align: middle;">
