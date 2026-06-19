@@ -49,38 +49,46 @@
       </p>
       
         <!-- DIE NEUE KONTAKT- & INSTAGRAM-SEKTION -->
-    <section class="contact-section">
-      <h2>Kontakt &amp; Austausch</h2>
-      <div class="contact-grid" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: stretch; margin-top: 20px;">
+    <section class="contact-section" style="max-width: 600px; margin: 40px auto 0 auto; padding: 0 20px;">
+      <h2 style="text-align: center; margin-bottom: 20px;">Kontakt &amp; Austausch</h2>
+      
+      <!-- Flex-Container für die Zwei-Spalten-Aufteilung -->
+      <div class="contact-container" style="display: flex; flex-direction: row; gap: 30px; justify-content: center; align-items: center; flex-wrap: wrap;">
         
-        <!-- Deine optimierte Profil-Box -->
-        <div class="contact-item profile-box" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-width: 220px; flex: 1; max-width: 280px; box-sizing: border-box;">
-          <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); border: 2px solid #b71c1c;">
+        <!-- Linke Seite: Dein Profil (ohne Klick, ohne Hover-Effekt) -->
+        <div class="profile-box-static" style="display: flex; flex-direction: column; align-items: center; text-align: center; width: 180px; pointer-events: none;">
+          <div style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); border: 2px solid #b71c1c;">
             <img src="Sabine_Eberling.png" alt="Sabine Eberling" style="width: 100%; height: 100%; object-fit: cover; display: block;">
           </div>
-          <span style="font-weight: 700; font-size: 1.1rem; color: #b71c1c;"><span class="contact-icon" style="margin-right: 6px;">👤</span>Sabine Eberling</span>
+          <span style="font-weight: 700; font-size: 1.1rem; color: inherit; white-space: nowrap;">
+            <span class="contact-icon" style="margin-right: 4px;">👤</span> Sabine Eberling
+          </span>
         </div>
 
-        <!-- E-Mail -->
-        <a href="mailto:Theatergetoese@gmail.com" class="contact-item" style="display: flex; align-items: center; justify-content: center; gap: 10px; padding: 20px; min-width: 220px; flex: 1; max-width: 280px; border-radius: 12px; box-sizing: border-box; text-decoration: none;">
-          <span class="contact-icon">✉️</span> TheaterGetoese@gmail.com
-        </a>
+        <!-- Rechte Seite: Die Kontaktlinks direkt untereinander -->
+        <div class="contact-links-stack" style="display: flex; flex-direction: column; gap: 12px; flex: 1; min-width: 240px;">
+          
+          <!-- E-Mail -->
+          <a href="mailto:Theatergetoese@gmail.com" class="contact-item" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 8px; text-decoration: none; box-sizing: border-box; width: 100%;">
+            <span class="contact-icon">✉️</span> TheaterGetoese@gmail.com
+          </a>
 
-        <!-- Telefon -->
-        <a href="tel:+4917624844708" class="contact-item" style="display: flex; align-items: center; justify-content: center; gap: 10px; padding: 20px; min-width: 220px; flex: 1; max-width: 280px; border-radius: 12px; box-sizing: border-box; text-decoration: none;">
-          <span class="contact-icon">📞</span> 0176 24844708
-        </a>
+          <!-- Telefon -->
+          <a href="tel:+4917624844708" class="contact-item" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 8px; text-decoration: none; box-sizing: border-box; width: 100%;">
+            <span class="contact-icon">📞</span> 0176 24844708
+          </a>
 
-        <!-- Instagram -->
-        <a href="https://instagram.com/improgetoese/" class="contact-item" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; gap: 10px; padding: 20px; min-width: 220px; flex: 1; max-width: 280px; border-radius: 12px; box-sizing: border-box; text-decoration: none;">
-          <span class="contact-icon" style="display: inline-flex; align-items: center;">
-            <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-            </svg>
-          </span>
-          Instagram
-        </a>
+          <!-- Instagram -->
+          <a href="https://instagram.com/improgetoese/" class="contact-item" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 8px; text-decoration: none; box-sizing: border-box; width: 100%;">
+            <span class="contact-icon" style="display: inline-flex; align-items: center;">
+              <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+              </svg>
+            </span>
+            Instagram
+          </a>
 
+        </div>
       </div>
     </section>
 
