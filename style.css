@@ -77,7 +77,19 @@ h1 {
 }
 
 .workshop-tile {
-  background: radial-gradient(circle, #1976d2 0%, #0d47a1 100%);
+  background: 
+    /* Hier fügen wir 4 versetzte, unterschiedlich große Logos als Hintergrund-Ebenen ein */
+    url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' viewBox='0 0 500 500'><circle cx='250' cy='250' r='160' fill='%23ffffff' /><g fill='none' stroke='%23e62214' stroke-width='4' opacity='0.85'><path d='M 250,85 C 345,83 416,155 413,250 C 410,345 340,414 245,411 C 150,408 86,335 89,240 C 92,145 155,87 250,85 Z' /></g><path id='tp' d='M 125,260 A 130,130 0 0,1 375,260' fill='none' /><text font-family='Arial' font-size='34' fill='%23e62214' font-weight='500'><textPath href='%23tp' startOffset='50%' text-anchor='middle'>TheaterGetöse</textPath></text><g fill='%23e62214'><ellipse cx='220' cy='245' rx='5' ry='9' /><ellipse cx='245' cy='245' rx='5' ry='9' /><path d='M 213,268 Q 233,293 253,268' fill='none' stroke='%23e62214' stroke-width='4' stroke-linecap='round' /></g></svg>") -40px -30px / 140px 140px no-repeat,
+    
+    url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' viewBox='0 0 500 500'><circle cx='250' cy='250' r='160' fill='%23ffffff' /><g fill='none' stroke='%23e62214' stroke-width='4' opacity='0.85'><path d='M 250,85 C 345,83 416,155 413,250 C 410,345 340,414 245,411 C 150,408 86,335 89,240 C 92,145 155,87 250,85 Z' /></g><path id='tp' d='M 125,260 A 130,130 0 0,1 375,260' fill='none' /><text font-family='Arial' font-size='34' fill='%23e62214' font-weight='500'><textPath href='%23tp' startOffset='50%' text-anchor='middle'>TheaterGetöse</textPath></text><g fill='%23e62214'><ellipse cx='220' cy='245' rx='5' ry='9' /><ellipse cx='245' cy='245' rx='5' ry='9' /><path d='M 213,268 Q 233,293 253,268' fill='none' stroke='%23e62214' stroke-width='4' stroke-linecap='round' /></g></svg>") calc(100% + 30px) 40px / 110px 110px no-repeat,
+    
+    url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' viewBox='0 0 500 500'><circle cx='250' cy='250' r='160' fill='%23ffffff' /><g fill='none' stroke='%23e62214' stroke-width='4' opacity='0.85'><path d='M 250,85 C 345,83 416,155 413,250 C 410,345 340,414 245,411 C 150,408 86,335 89,240 C 92,145 155,87 250,85 Z' /></g><path id='tp' d='M 125,260 A 130,130 0 0,1 375,260' fill='none' /><text font-family='Arial' font-size='34' fill='%23e62214' font-weight='500'><textPath href='%23tp' startOffset='50%' text-anchor='middle'>TheaterGetöse</textPath></text><g fill='%23e62214'><ellipse cx='220' cy='245' rx='5' ry='9' /><ellipse cx='245' cy='245' rx='5' ry='9' /><path d='M 213,268 Q 233,293 253,268' fill='none' stroke='%23e62214' stroke-width='4' stroke-linecap='round' /></g></svg>") 30% calc(100% + 50px) / 160px 160px no-repeat,
+    
+    url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' viewBox='0 0 500 500'><circle cx='250' cy='250' r='160' fill='%23ffffff' /><g fill='none' stroke='%23e62214' stroke-width='4' opacity='0.85'><path d='M 250,85 C 345,83 416,155 413,250 C 410,345 340,414 245,411 C 150,408 86,335 89,240 C 92,145 155,87 250,85 Z' /></g><path id='tp' d='M 125,260 A 130,130 0 0,1 375,260' fill='none' /><text font-family='Arial' font-size='34' fill='%23e62214' font-weight='500'><textPath href='%23tp' startOffset='50%' text-anchor='middle'>TheaterGetöse</textPath></text><g fill='%23e62214'><ellipse cx='220' cy='245' rx='5' ry='9' /><ellipse cx='245' cy='245' rx='5' ry='9' /><path d='M 213,268 Q 233,293 253,268' fill='none' stroke='%23e62214' stroke-width='4' stroke-linecap='round' /></g></svg>") 85% calc(100% + 20px) / 80px 80px no-repeat,
+    
+    /* Dein originaler blauer Farbverlauf bleibt ganz unten */
+    radial-gradient(circle, #1976d2 0%, #0d47a1 100%);
+    
   border-radius: var(--radius);
   box-shadow: 0 8px 24px rgba(211, 47, 47, 0.25);
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
@@ -91,7 +103,12 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  /* WICHTIG: Verhindert, dass die Logos über den Kachelrand herausragen */
+  position: relative;
+  overflow: hidden;
 }
+
 
 @media (hover: hover) {
   .workshop-tile:hover {
