@@ -14,7 +14,6 @@
   <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
-<body>
 
   <div class="page-wrapper">
 
@@ -26,10 +25,15 @@
       <p class="tagline">Spontanität · Kreativität · Gemeinsames Lachen<br>(Impro)Theater-Workshops für Alle</p>
     </header>
 
+    <!-- NEU: Profilbild direkt unter dem Header platziert -->
+    <div style="display: flex; justify-content: center; margin: 30px auto 10px auto;">
+      <div style="width: 140px; height: 140px; border-radius: 50%; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.18); border: 3px solid #b71c1c;">
+        <img src="Sabine_Eberling.png" alt="Sabine Eberling" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+    </div>
+
     <div class="workshops-tiles">
-      <a href="uber_mich.html" class="workshop-tile">
-        <div class="workshop-title">Über Mich</div>
-      </a>
+      <!-- "Über Mich" wurde hier entfernt und nach unten verschoben -->
       <a href="improgetoese.html" class="workshop-tile">
         <div class="workshop-title">ImproGetöse</div>
       </a>
@@ -49,26 +53,24 @@
         <span class="tile-badge">NEU! ✈️</span>
         <div class="workshop-title" style="color: #b71c1c;">Theater- & Kreativreisen</div>
       </a>
+      <!-- JETZT GANZ UNTEN: Über Mich Kachel -->
+      <a href="uber_mich.html" class="workshop-tile">
+        <div class="workshop-title">Über Mich</div>
+      </a>
     </div>
-      <p style="color: #b71c1c; text-align: center; margin-top: 40px; font-size: clamp(1.4rem, 3.5vw, 1.7rem); font-weight: 700;">
-        Alle Preise nach Absprache
-      </p>
+
+    <p style="color: #b71c1c; text-align: center; margin-top: 40px; font-size: clamp(1.4rem, 3.5vw, 1.7rem); font-weight: 700;">
+      Alle Preise nach Absprache
+    </p>
       
     <section class="contact-section" style="max-width: 720px; margin: 50px auto 0 auto; padding: 0 20px;">
       <h2 style="text-align: center; margin-top:45px; margin-bottom: 25px;">Kontakt &amp; Austausch</h2>
       
-          <div class="contact-container" style="display: flex; flex-direction: row; gap: 40px; justify-content: center; align-items: center; flex-wrap: wrap; background: rgba(255,255,255,0.03); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">  
+      <div class="contact-container" style="background: rgba(255,255,255,0.03); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">  
             
-          <div class="profile-box-static" style="display: flex; flex-direction: column; align-items: center; text-align: center; width: 200px; pointer-events: none;">
-          <div style="width: 140px; height: 140px; border-radius: 50%; overflow: hidden; margin-bottom: 16px; box-shadow: 0 6px 15px rgba(0,0,0,0.18); border: 3px solid #b71c1c;">
-            <img src="Sabine_Eberling.png" alt="Sabine Eberling" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-          </div>
-          <span style="font-weight: 700; font-size: 1.2rem; color: inherit; white-space: nowrap;">
-            <span class="contact-icon" style="margin-right: 6px;">👤</span> Sabine Eberling
-          </span>
-        </div>
+        <!-- Profilbild hier entfernt für eine sauberere Optik -->
 
-        <div class="contact-links-stack" style="display: flex; flex-direction: column; gap: 14px; flex: 1; min-width: 280px;">
+        <div class="contact-links-stack" style="display: flex; flex-direction: column; gap: 14px; width: 100%;">
           
           <a href="mailto:Theatergetoese@gmail.com" class="contact-item" style="display: flex; align-items: center; padding: 15px 20px; border-radius: 10px; text-decoration: none; box-sizing: border-box;">
             <span class="contact-icon" style="width: 28px; display: inline-block; text-align: center; font-size: 1.3rem; margin-right: 14px;">✉️</span>
@@ -80,14 +82,14 @@
             <span style="display: inline-block;">0176 24844708</span>
           </a>
 
-         <a href="https://instagram.com/improgetoese/" class="contact-item" target="_blank" rel="noopener" style="display: flex; align-items: center; padding: 15px 20px; border-radius: 10px; text-decoration: none; box-sizing: border-box;">
-           <span class="contact-icon" style="width: 28px; display: inline-flex; justify-content: center; align-items: center; margin-right: 14px; flex-shrink: 0;">
-           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="#b71c1c" style="display: block;">
-           <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.645.069-4.85.069-3.205 0-3.584-.012-4.849-.069-3.225-.149-4.771-1.664-4.919-4.919-.058-1.266-.069-1.645-.069-4.85 0-3.204.012-3.583.069-4.849.148-3.228 1.667-4.771 4.919-4.919 1.265-.058 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-           </svg>
-           </span>
-         <span style="display: inline-block;">@TheaterGetöse</span>
-         </a>
+          <a href="https://instagram.com/theatergetoese" class="contact-item" target="_blank" rel="noopener" style="display: flex; align-items: center; padding: 15px 20px; border-radius: 10px; text-decoration: none; box-sizing: border-box;">
+            <span class="contact-icon" style="width: 28px; display: inline-flex; justify-content: center; align-items: center; margin-right: 14px; flex-shrink: 0;">
+              <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="22" height="22" fill="#b71c1c" style="display: block;">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.645.069-4.85.069-3.205 0-3.584-.012-4.849-.069-3.225-.149-4.771-1.664-4.919-4.919-.058-1.266-.069-1.645-.069-4.85 0-3.204.012-3.583.069-4.849.148-3.228 1.667-4.771 4.919-4.919 1.265-.058 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </span>
+            <span style="display: inline-block;">@TheaterGetöse</span>
+          </a>
         </div>
       </div>
     </section>
